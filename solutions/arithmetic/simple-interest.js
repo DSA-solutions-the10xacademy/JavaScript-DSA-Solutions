@@ -17,4 +17,4 @@ let rate = parseInt(readLine());
 
 let simpleInterest = (principal * time * rate)/100;
 
-console.log(parseInt(simpleInterest));
+console.log(simpleInterest);
