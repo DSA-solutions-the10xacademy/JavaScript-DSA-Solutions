@@ -21,4 +21,4 @@
 | If you click on the `Stage 1` link from above, it will open the newly created sub-task. | ![Sub task](images/sub-task.png) |
 | Add the label `stage-wise-video`. | ![Sub-task label](images/sub-task-label.png) |
 | Add an assignee. Assignee is the mentor who will create the `Stage 1` video. | ![Sub-task assignedd](images/sub-task-assignee.png) |
-| Repeat the above steps for the remaining stages. For every main task, you must create 6 sub-tasks, one for each stage. | |
+| **Repeat the above steps for the remaining stages. For every main task, you must create 6 sub-tasks, one for each stage.** | |
