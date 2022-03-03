@@ -4,12 +4,18 @@ let idx = 0;
 data = data.split('\n');
 
 function readLine() {
-  idx++;
-  return data[idx - 1];
+    idx++;
+    return data[idx - 1];
 }
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
+
+// Do not change the function signature
+// Fill in the function 
+// string_to_repeat will be string like 'abc'
+// repeat will be an int like 3
+// return 'abc abc abc'
 
 function stringRepeat(inputString, repeat){
     let resultString = "";
@@ -23,7 +29,9 @@ function stringRepeat(inputString, repeat){
     return resultString;
 }
 
-let inputString = readLine();
-let repeat = parseInt(readLine());
+// Please don't change anything below this line.
+// You don't have to worry about reading input, just fill the function above.
 
-console.log(stringRepeat(inputString, repeat));
+let input_string = readLine()
+let input_number = parseInt(readLine())
+console.log(stringRepeat(input_string, input_number))
