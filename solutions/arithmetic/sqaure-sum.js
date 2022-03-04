@@ -15,4 +15,4 @@ let num = parseInt(readLine());
 
 let squareSum = (num * (num + 1) * (2 * num + 1)) / 6;
 
-console.log(parseInt(squareSum));
+console.log(squareSum);
