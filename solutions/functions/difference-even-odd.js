@@ -10,11 +10,11 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
-// You should name your function as difference_sum_even_odd_index
+// You should name your function as differenceOfSumOfEvenOddIndex
 // It should take a list of integers
 // Return an integer
 
-function difference_sum_even_odd_index(list){
+function differenceOfSumOfEvenOddIndexnumbers(list){
     let sumOfEvenIndex = 0;
     let sumOfOddIndex = 0;
 
@@ -30,14 +30,14 @@ function difference_sum_even_odd_index(list){
 }
 
 // Do not change anything below this line
-function Convert_to_Number(list){
-  for(let each in list){
-      list[each]=Number(list[each])
-  }
-  
+function ConvertToNumber(list){
+    for(let each in list){
+        list[each]=Number(list[each]);
+    }
+    
 }
 
 
-var numbers =readLine().split(" ")
-Convert_to_Number(numbers)
-console.log(difference_sum_even_odd_index(numbers))
+let numbers =readLine().split(" ");
+ConvertToNumber(numbers);
+console.log(differenceOfSumOfEvenOddIndexnumbers(numbers));
