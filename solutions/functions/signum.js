@@ -28,5 +28,5 @@ function signum(number){
 
 // Please do not edit the code below this line.
 
-var test_input = parseFloat(readLine())
-console.log(signum(test_input))
+let testInput = parseFloat(readLine());
+console.log(signum(testInput));
