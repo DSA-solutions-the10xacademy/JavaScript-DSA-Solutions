@@ -12,19 +12,19 @@ function readLine() {
 
 // Following function takes integer and should return True if it's prime 
 // otherwise  should return False.
-function is_prime(input_number){
+function isPrime(inputNumber){
     // You can start below this
     
-    if(input_number <= 1) return "False";
-	else if(input_number === 2) return "True";
+    if(inputNumber <= 1) return "False";
+	else if(inputNumber === 2) return "True";
 
-    for(let i = 2; i <= parseInt(Math.sqrt(input_number)); i++){
-        if(input_number % i === 0) return "False";
+    for(let i = 2; i <= parseInt(Math.sqrt(inputNumber)); i++){
+        if(inputNumber % i === 0) return "False";
     }
     
     return "True";
 }
 
 //Please don't change anything below this line.
-let number=parseInt(readLine())
-console.log(is_prime(number))
+let number=parseInt(readLine());
+console.log(isPrime(number));
