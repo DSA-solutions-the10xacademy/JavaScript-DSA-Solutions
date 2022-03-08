@@ -15,11 +15,15 @@ function readLine() {
 function isPrime(inputNumber){
     // You can start below this
     
-    if(inputNumber <= 1) return "False";
-	else if(inputNumber === 2) return "True";
+    if(inputNumber <= 1){ 
+        return "False";
+    }
 
-    for(let i = 2; i <= parseInt(Math.sqrt(inputNumber)); i++){
-        if(inputNumber % i === 0) return "False";
+    let endRange = Math.floor(Math.sqrt(inputNumber));
+    for(let i = 2; i <= endRange; i++){
+        if(inputNumber % i === 0){ 
+            return "False";
+        }
     }
     
     return "True";
