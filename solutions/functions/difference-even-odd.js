@@ -10,7 +10,7 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
-// You should name your function as differenceOfSumOfEvenOddIndex
+// You should name your function as differenceOfSumOfEvenOddIndexnumbers
 // It should take a list of integers
 // Return an integer
 
