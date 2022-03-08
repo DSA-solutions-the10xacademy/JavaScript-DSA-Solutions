@@ -13,17 +13,20 @@ function readLine() {
 
 // Do not change the function signature
 // Fill in the function 
-// string_to_repeat will be string like 'abc'
+// inputString will be string like 'abc'
 // repeat will be an int like 3
 // return 'abc abc abc'
 
-function stringRepeat(inputString, repeat){
+function stringRepeat (inputString, repeat){
+    // Write from here
+    
     let resultString = "";
 
     for(let i = 1; i < repeat; i++){
         resultString += inputString + " ";
     }
 
+    // for the last repetition, we want to avoid the trailing space
     resultString += inputString;
 
     return resultString;
@@ -32,6 +35,6 @@ function stringRepeat(inputString, repeat){
 // Please don't change anything below this line.
 // You don't have to worry about reading input, just fill the function above.
 
-let input_string = readLine()
-let input_number = parseInt(readLine())
-console.log(stringRepeat(input_string, input_number))
+let inputString = readLine();
+let inputNumber = parseInt(readLine());
+console.log(stringRepeat(inputString, inputNumber));
