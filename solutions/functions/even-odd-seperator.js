@@ -18,8 +18,12 @@ function evenOddSeparator(list){
     let odd = [];
 
     for(let i = 0; i < list.length; i++){
-        if(list[i] % 2 === 0) even.push(list[i]);
-        else odd.push(list[i]);
+        if(list[i] % 2 === 0){
+          even.push(list[i]);
+        }
+        else{
+          odd.push(list[i]);
+        }
     }
 
     return odd.concat(even);
