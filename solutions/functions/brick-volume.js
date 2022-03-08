@@ -12,10 +12,10 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
-// You should fill this functions using the volume and calculate_price functions defined below this.
+// You should fill this functions using the volume and calculatePrice functions defined below this.
 // dimensions is a list with 2 values width and height respectively
-// brick_count is int representing total bricks
-function calculate_total_price_of_bricks(dimensions, brick_count){
+// brickCount is int representing total bricks
+function calculateTotalPriceOfBricks(dimensions, brickCount){
     let length = 100;
     let width = dimensions[0];
     let height = dimensions[1];
@@ -27,29 +27,30 @@ function calculate_total_price_of_bricks(dimensions, brick_count){
         height = 40;
     }
 
-    let totalVolume = brick_count * volume(length, width, height);
-    let totalPrice = calculate_price(totalVolume);
+    let totalVolume = brickCount * volume(length, width, height);
+    let totalPrice = calculatePrice(totalVolume);
 
     return totalPrice;
 }
 
+
 // Do not change anything below this line
 function volume(length=100,width=60,height=40){
-  return length*width*height
+  return length*width*height;
 }
 
-function calculate_price(volume, price=0.00005){
-	return Math.round(volume*price)
+function calculatePrice(volume, price=0.00005){
+	return Math.floor(volume*price);
 }
-function Convert_to_Number(list){
+function ConvertToNumber(list){
     for(let each in list){
-        list[each]=Number(list[each])
+        list[each]=Number(list[each]);
     }
     
 }
 
-let brick_count = parseInt(readLine())
-dimensions = readLine().split(" ")
-Convert_to_Number(dimensions)
-total_price = calculate_total_price_of_bricks(dimensions, brick_count)
-console.log(total_price)
+let brickCount = parseInt(readLine());
+dimensions = readLine().split(" ");
+ConvertToNumber(dimensions);
+totalPrice = calculateTotalPriceOfBricks(dimensions, brickCount);
+console.log(totalPrice);
