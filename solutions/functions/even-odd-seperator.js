@@ -39,7 +39,7 @@ function ConvertToNumber(list){
 
 
 
-var numbers =readLine().split(" ");
+let numbers =readLine().split(" ");
 ConvertToNumber(numbers);
 let separated = evenOddSeparator(numbers);
 for(num of separated){
