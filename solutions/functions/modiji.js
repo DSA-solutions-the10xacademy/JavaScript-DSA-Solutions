@@ -19,7 +19,7 @@ function calculateTotalFund(salaries, peopleCount){
     return funds;
 }
 
-function Convert_to_Number(list){
+function ConvertToNumber(list){
     for(let each in list){
         list[each]=Number(list[each])
     }
@@ -27,6 +27,6 @@ function Convert_to_Number(list){
 
 let peopleCount = parseInt(readLine());
 let salaries = readLine().split(" ");
-Convert_to_Number(salaries);
+ConvertToNumber(salaries);
 let totalFund = calculateTotalFund(salaries, peopleCount);
 console.log(totalFund);
