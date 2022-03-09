@@ -6,7 +6,7 @@ labels: final-video
 assignees: ''
 
 ---
-
+Please do not mark these check-boxes manually. They will be automatically marked when the respective sub-tasks are closed.
 - [ ] Stage 1 - Understand the problem
 - [ ] Stage 2 - New test cases
 - [ ] Stage 3 - Algorithm
