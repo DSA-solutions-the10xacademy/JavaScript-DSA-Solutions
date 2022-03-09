@@ -14,7 +14,7 @@ function readLine() {
 function calculateTotalFund(salaries, peopleCount){
     let funds = 0;
     for(let i = 0; i < peopleCount; i++){
-        funds += Math.ceil(0.07 * salaries[i]);
+        funds += Math.ceil((7*salaries[i])/100);
     }
     return funds;
 }
