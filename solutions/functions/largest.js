@@ -25,7 +25,7 @@ function largestElement(A){
 }
 
 // --------- Do NOT edit Below this line -----------
-function Convert_to_Number(list){
+function ConvertToNumber(list){
   for(let each in list){
       list[each]=Number(list[each])
   } 
@@ -33,5 +33,5 @@ function Convert_to_Number(list){
 
 let n = parseInt(readLine())
 let A=readLine().split(" ")
-Convert_to_Number(A)
+ConvertToNumber(A)
 console.log(largestElement(A))
