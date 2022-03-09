@@ -19,7 +19,7 @@ const Person = class {
 };
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE
-let input_string = readLine().split(" ");
-var p1 = new Person(input_string[0], input_string[1]);
-console.log(p1.name);
-console.log(p1.age);
+let inputString = readLine().split(" ");
+var character = new Person(inputString[0], inputString[1]);
+console.log(character.name);
+console.log(character.age);
