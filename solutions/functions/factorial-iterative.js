@@ -12,7 +12,9 @@ function readLine() {
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
 function factorial(num){
-    if(num < 0) return "undefined";
+    if(num < 0){
+      return "undefined";
+    }
 
     let result = 1;
     for(let i = 1; i <= num; i++){
@@ -24,4 +26,4 @@ function factorial(num){
 
 let number = parseInt(readLine());
 
-console.log(factorial(number))
+console.log(factorial(number));
