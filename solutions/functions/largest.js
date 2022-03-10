@@ -15,9 +15,9 @@ function largestElement(A){
 
     let largest = Number.NEGATIVE_INFINITY;
 
-    for(let i = 0; i < A.length; i++){
-        if(A[i] > largest){
-            largest = A[i];
+    for(let index = 0; index < A.length; index++){
+        if(A[index] > largest){
+            largest = A[index];
         }
     }
 
