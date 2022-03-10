@@ -15,22 +15,22 @@ const BankAccount = class {
   constructor() {
     this.balance = 0;
   }
-  credit(currtransact) {
-    this.balance += currtransact;
+  credit(currentTransaction) {
+    this.balance += currentTransaction;
   }
-  debit(currtransact) {
-    this.balance += currtransact;
+  debit(currentTransaction) {
+    this.balance += currentTransaction;
   }
 };
 
-var Num = parseInt(readLine());
+let n = parseInt(readLine());
 const myAccount = new BankAccount();
-for (let i = 0; i < Num; i++) {
-  var currtransact = parseInt(readLine());
-  if (currtransact < 0) {
-    myAccount.debit(currtransact);
+for (let index = 0; index < n ; index++) {
+  let currentTransaction = parseInt(readLine());
+  if (currentTransaction < 0) {
+    myAccount.debit(currentTransaction);
   } else {
-    myAccount.credit(currtransact);
+    myAccount.credit(currentTransaction);
   }
 }
 console.log(myAccount.balance);
