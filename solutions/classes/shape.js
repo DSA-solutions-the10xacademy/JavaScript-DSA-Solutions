@@ -1,7 +1,7 @@
 let fs = require("fs");
-let data = fs.readFileSync(0, "utf-8");
+let data = fs.readFileSync(0, 'utf-8');
 let idx = 0;
-data = data.split("\n");
+data = data.split('\n');
 
 function readLine() {
   idx++;
@@ -11,7 +11,8 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 
 // Define the required class here...
-const Rectangle = class {
+
+class Rectangle {
   constructor(length, width) {
     this.length = length;
     this.width = width;
@@ -23,6 +24,7 @@ const Rectangle = class {
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE
 let input = readLine().split(" ");
-let [l, w] = [parseInt(input[0]), parseInt(input[1])];
-var r1 = new Rectangle(l, w);
-console.log(r1.calculatePerimeter());
+let length = parseInt(input[0]);
+let width = parseInt(input[1]); 
+let rectangle = new Rectangle(length, width);
+console.log(rectangle.calculatePerimeter());
