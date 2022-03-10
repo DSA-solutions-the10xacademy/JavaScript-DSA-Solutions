@@ -9,6 +9,12 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
+
+// Your class should be named `Circle`.
+// Method to get area should be named `getArea`
+// Method to get circumference should be named `getCircumference`.
+// Your class should take radius `r` as input when creating an object.
+
 class Circle {
   constructor(r = 0) {
     this.r = r;
@@ -27,10 +33,8 @@ class Circle {
   }
 };
 
-// Your class should be named `Circle`.
-// Method to get area should be named `getArea`
-// Method to get circumference should be named `getCircumference`.
-// Your class should take radius `r` as input when creating an object.
+
+// -------- Do NOT edit anything above this line ----------
 
 let oneCircle = new Circle(parseFloat(readLine()));
 console.log(parseFloat(oneCircle.getArea()));
