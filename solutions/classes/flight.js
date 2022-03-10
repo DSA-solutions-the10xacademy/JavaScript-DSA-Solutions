@@ -10,20 +10,26 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-const Flight = class{
+class Flight {
 	constructor(upTime,downTime){
 		this.upTime=upTime;
 		this.downTime=downTime;
 	}
 	calculateFlight(){
-		var upTimeArr=this.upTime.split(':');
-		upTimeArr=upTimeArr.map((x)=>parseInt(x));
-		var downTimeArr=this.downTime.split(':');
-		downTimeArr=downTimeArr.map((x)=>parseInt(x));
-		return (downTimeArr[0]-upTimeArr[0])*60 + downTimeArr[1]-upTimeArr[1];
+		//write your code here
+		let upTimeArr = this.upTime.split(':');
+		let downTimeArr = this.downTime.split(':');
+		let upTimeHrs = parseInt(upTimeArr[0]);
+		let upTimeMins = parseInt(upTimeArr[1]);
+		let downTimeHrs = parseInt(downTimeArr[0]);
+		let downTimeMins = parseInt(downTimeArr[1]);
+		return (downTimeHrs - upTimeHrs) * 60 + downTimeMins - upTimeMins;
+		
 	}
 }
 
-upTime=readLine();
-downTime=readLine();
-console.log(new Flight(upTime,downTime).calculateFlight());
+// -------- Do NOT edit anything above this line ----------
+let upTime=readLine();
+let downTime=readLine();
+let NewFlight = new Flight(upTime,downTime)
+console.log(NewFlight.calculateFlight());
