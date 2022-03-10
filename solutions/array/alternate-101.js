@@ -10,15 +10,13 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let arr=readLine().split(' ');
-let N=parseInt(arr[0]);
-let K=parseInt(arr[1]);
-arr=readLine().split(' ');
+
+let N=parseInt(readLine());
+let array=readLine().split(' ');
 let sum=0;
-for(let i=0;i<N;i++){
-    arr[i]=parseInt(arr[i]);
-    if(arr[i]===K){
-        sum++;
-    }
+for(let index=0;index<N;index++){
+	if(i%2===0){
+		sum+=parseInt(array[i]);
+	}
 }
 console.log(sum)
