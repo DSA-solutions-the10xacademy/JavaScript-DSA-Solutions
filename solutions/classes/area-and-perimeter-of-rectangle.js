@@ -14,7 +14,7 @@ function readLine() {
 // Method to get area should be named as `rectangleArea`.
 // Method to get perimeter should be named as `rectanglePerimeter`.
 // You should be taking `length` and `width` as inputs when creating the object for your class.
-const Rectangle = class {
+class Rectangle {
   constructor(length, width) {
     this.length = length;
     this.width = width;
@@ -33,6 +33,8 @@ const Rectangle = class {
   }
 };
 
-newRectangle = new Rectangle(parseInt(readLine()), parseInt(readLine()));
+let length = parseInt(readLine());
+let width  = parseInt(readLine());
+let newRectangle =new Rectangle(length,width);
 console.log(newRectangle.rectangleArea());
 console.log(newRectangle.rectanglePerimeter());
