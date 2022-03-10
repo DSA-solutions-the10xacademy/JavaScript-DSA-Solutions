@@ -9,30 +9,31 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
-const Inputreader = class {
-  Data = readLine();
+class InputReader {
+  data = readLine();
   constructor(Index) {
     this.Index = Index;
   }
-  read_strings() {
-    console.log(this.Index + " " + this.Data);
+  readStrings() {
+    console.log(this.Index + " " + this.data);
   }
-  read_integers() {
-    console.log(this.Index + " " + parseInt(this.Data));
+  readIntegers() {
+    console.log(this.Index + " " + parseInt(this.data));
   }
-  read_floats() {
-    console.log(this.Index + " " + parseFloat(this.Data).toFixed(2));
+  readFloats() {
+    console.log(this.Index + " " + parseFloat(this.data).toFixed(2));
   }
 };
 
-var Num = parseInt(readLine());
-var typeofinput = readLine();
-for (let i = 0; i < Num; i++) {
-  if (typeofinput === "string") {
-    new Inputreader(i).read_strings();
-  } else if (typeofinput === "integer") {
-    new Inputreader(i).read_integers();
+let num = parseInt(readLine());
+let typeOfInput = readLine();
+for (let i = 0; i < num; i++) {
+	let NewInputReader = new InputReader(i)	
+	if (typeOfInput === "string") {
+    NewInputReader.readStrings();
+  } else if (typeOfInput === "integer") {
+    NewInputReader.readIntegers();
   } else {
-    new Inputreader(i).read_floats();
+    NewInputReader.readFloats();
   }
 }
