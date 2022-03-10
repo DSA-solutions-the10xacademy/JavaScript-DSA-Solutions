@@ -13,16 +13,16 @@ function readLine() {
 // Your class should be named `CarSell`.
 // Your method should be named `getPromisingCustomers`
 // Your method should return the indices of customers who are willing to pay greater than or equal to 90% of the car value
-const CarSell = class {
+class CarSell {
   constructor(customerProposals) {
     this.customerProposals = customerProposals;
   }
   getPromisingCustomers() {
-    var promisingcustomers = [];
-    var count = 0;
-    var flag = false;
-    for (var j of this.customerProposals) {
-      if (j >= 900000) {
+    let promisingcustomers = [];
+    let count = 0;
+    let flag = false;
+    for (let price of this.customerProposals) {
+      if (price >= 900000) {
         flag = true;
         promisingcustomers.push(count);
       }
@@ -35,13 +35,13 @@ const CarSell = class {
   }
 };
 
-var numCustomers = parseInt(readLine());
-var customerProposals = [];
+let numCustomers = parseInt(readLine());
+let customerProposals = [];
 for (let i = 0; i < numCustomers; i++) {
   customerProposals.push(parseInt(readLine()));
 }
 
-var car = new CarSell(customerProposals);
-for (var j of car.getPromisingCustomers()) {
+let car = new CarSell(customerProposals);
+for (let j of car.getPromisingCustomers()) {
   console.log(j);
 }
