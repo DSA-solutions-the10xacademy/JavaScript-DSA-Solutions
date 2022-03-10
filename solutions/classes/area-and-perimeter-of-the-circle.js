@@ -9,7 +9,7 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
-const Circle = class {
+class Circle {
   constructor(r = 0) {
     this.r = r;
   }
@@ -32,6 +32,6 @@ const Circle = class {
 // Method to get circumference should be named `getCircumference`.
 // Your class should take radius `r` as input when creating an object.
 
-var one_circle = new Circle(parseFloat(readLine()));
-console.log(parseFloat(one_circle.getArea()));
-console.log(parseFloat(one_circle.getCircumference()));
+let oneCircle = new Circle(parseFloat(readLine()));
+console.log(parseFloat(oneCircle.getArea()));
+console.log(parseFloat(oneCircle.getCircumference()));
