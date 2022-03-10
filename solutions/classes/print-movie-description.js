@@ -9,23 +9,24 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
-const Movie = class {
-  constructor(length_in_minutes, num_characters, language) {
-    this.length_in_minutes = length_in_minutes;
-    this.num_characters = num_characters;
+class Movie {
+  constructor(lengthInMinutes, numCharacters, language) {
+    this.lengthInMinutes = lengthInMinutes;
+    this.numCharacters = numCharacters;
     this.language = language;
   }
   run() {
     let text = "This is a ";
     text = text + this.language + " movie with ";
-    text = text + this.num_characters + " characters and is ";
-    text = text + this.length_in_minutes + " minutes long.";
+    text = text + this.numCharacters + " characters and is ";
+    text = text + this.lengthInMinutes + " minutes long.";
     return text;
   }
 };
 
-var language = readLine();
-var num_characters = readLine();
-var length_in_minutes = readLine();
+let language = readLine();
+let numCharacters = readLine();
+let lengthInMinutes = readLine();
 
-console.log(new Movie(length_in_minutes, num_characters, language).run());
+let movie =  new Movie(lengthInMinutes, numCharacters, language)
+console.log(movie.run());
