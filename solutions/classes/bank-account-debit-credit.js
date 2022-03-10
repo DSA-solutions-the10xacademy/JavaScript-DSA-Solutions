@@ -9,7 +9,7 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
-const BankAccount = class {
+class BankAccount {
   balance = 0;
   // Optional Constructor
   constructor() {
