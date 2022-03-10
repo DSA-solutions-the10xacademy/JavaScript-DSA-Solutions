@@ -30,10 +30,10 @@ let typeOfInput = readLine();
 for (let i = 0; i < num; i++) {
 	let NewInputReader = new InputReader(i)	
 	if (typeOfInput === "string") {
-    NewInputReader.readStrings();
-  } else if (typeOfInput === "integer") {
-    NewInputReader.readIntegers();
-  } else {
-    NewInputReader.readFloats();
-  }
+		NewInputReader.readStrings();
+	} else if (typeOfInput === "integer") {
+		NewInputReader.readIntegers();
+	} else {
+		NewInputReader.readFloats();
+	}
 }
