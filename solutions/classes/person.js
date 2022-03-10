@@ -11,7 +11,7 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 
 // Define the required class here...
-const Person = class {
+class Person {
   constructor(name, age) {
     this.name = name;
     this.age = age;
@@ -20,6 +20,6 @@ const Person = class {
 
 // DO NOT CHANGE ANYTHING BELOW THIS LINE
 let inputString = readLine().split(" ");
-var character = new Person(inputString[0], inputString[1]);
+let character = new Person(inputString[0], inputString[1]);
 console.log(character.name);
 console.log(character.age);
