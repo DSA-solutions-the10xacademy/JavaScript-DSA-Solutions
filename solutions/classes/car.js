@@ -21,7 +21,7 @@ const Car = class {
 // DO NOT CHANGE ANYTHING BELOW THIS LINE
 let flag = parseInt(readLine());
 if (flag === 1) {
-  var inputString = readLine().split(" ");
+  let inputString = readLine().split(" ");
   vehicle = new Car(inputString[0], inputString[1]);
 } else {
   vehicle = new Car();
