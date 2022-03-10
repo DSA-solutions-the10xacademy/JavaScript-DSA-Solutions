@@ -11,7 +11,7 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 
 // Define the required class here...
-const Car = class {
+class Car {
   constructor(name = "Audi", model = "A4") {
     this.name = name;
     this.model = model;
