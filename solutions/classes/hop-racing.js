@@ -1,7 +1,7 @@
 let fs = require("fs");
-let data = fs.readFileSync(0, "utf-8");
+let data = fs.readFileSync(0, 'utf-8');
 let idx = 0;
-data = data.split("\n");
+data = data.split('\n');
 
 function readLine() {
   idx++;
@@ -10,16 +10,17 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-const HopRacing = class {
+
+class HopRacing {
   constructor() {
     this.currPosition = 0;
     this.numRounds = 0;
   }
-  jumpPosition(jumpamount) {
+  jumpPosition(jumpAmount) {
     if (this.currPosition < 10) {
       this.numRounds += 1;
     }
-    this.currPosition += jumpamount;
+    this.currPosition += jumpAmount;
   }
   getPosition() {
     return this.currPosition;
@@ -29,18 +30,19 @@ const HopRacing = class {
   }
 };
 
-var Num = parseInt(readLine());
-const HopRacer1 = new HopRacing();
-const HopRacer2 = new HopRacing();
+let Num = parseInt(readLine());
+let HopRacer1 = new HopRacing();
+let HopRacer2 = new HopRacing();
 
 for (let i = 0; i < Num; i++) {
-  var input = readLine().split(" ");
-  var [ID, hopamount] = [parseInt(input[0]), parseInt(input[1])];
+  let input = readLine().split(" ");
+  let ID = parseInt(input[0]);
+  let hopAmount = parseInt(input[1])
 
   if (ID === 1) {
-    HopRacer1.jumpPosition(hopamount);
+    HopRacer1.jumpPosition(hopAmount);
   } else {
-    HopRacer2.jumpPosition(hopamount);
+    HopRacer2.jumpPosition(hopAmount);
   }
 }
 
@@ -54,4 +56,4 @@ if (
   HopRacer1.getRounds() > HopRacer2.getRounds()
 ) {
   console.log(2);
-}
+} 
