@@ -10,38 +10,38 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-const RobotMovement = class {
+class RobotMovement {
   constructor() {
-    this.xcoordinate = 0;
-    this.ycoordinate = 0;
+    this.xCoordinate = 0;
+    this.yCoordinate = 0;
   }
   moveUp() {
-    this.ycoordinate += 1;
+    this.yCoordinate += 1;
   }
   moveDown() {
-    this.ycoordinate -= 1;
+    this.yCoordinate -= 1;
   }
   moveRight() {
-    this.xcoordinate += 1;
+    this.xCoordinate += 1;
   }
   moveLeft() {
-    this.xcoordinate -= 1;
+    this.xCoordinate -= 1;
   }
 };
 
 var Num = parseInt(readLine());
-const myRobotmove = new RobotMovement();
-for (let i = 0; i < Num; i++) {
-  var currmovement = readLine();
-  if (currmovement === "up") {
-    myRobotmove.moveUp();
-  } else if (currmovement === "down") {
-    myRobotmove.moveDown();
-  } else if (currmovement === "left") {
-    myRobotmove.moveLeft();
+const myRobotMove = new RobotMovement();
+for (let index = 0; index  < Num; index ++) {
+  var currentMovement = readLine();
+  if (currentMovement === "up") {
+    myRobotMove.moveUp();
+  } else if (currentMovement === "down") {
+    myRobotMove.moveDown();
+  } else if (currentMovement === "left") {
+    myRobotMove.moveLeft();
   } else {
-    myRobotmove.moveRight();
+    myRobotMove.moveRight();
   }
 }
-console.log(myRobotmove.xcoordinate);
-console.log(myRobotmove.ycoordinate);
+console.log(myRobotMove.xCoordinate);
+console.log(myRobotMove.yCoordinate);
