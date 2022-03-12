@@ -29,7 +29,7 @@ class RobotMovement {
   }
 };
 
-var Num = parseInt(readLine());
+let Num = parseInt(readLine());
 let myRobotMove = new RobotMovement();
 for (let index = 0; index  < Num; index ++) {
   var currentMovement = readLine();
