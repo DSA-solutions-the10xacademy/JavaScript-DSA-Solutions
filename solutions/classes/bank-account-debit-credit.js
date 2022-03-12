@@ -24,7 +24,7 @@ class BankAccount {
 };
 
 let n = parseInt(readLine());
-const myAccount = new BankAccount();
+let myAccount = new BankAccount();
 for (let index = 0; index < n ; index++) {
   let currentTransaction = parseInt(readLine());
   if (currentTransaction < 0) {
