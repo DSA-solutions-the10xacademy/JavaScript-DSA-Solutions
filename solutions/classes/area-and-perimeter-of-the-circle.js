@@ -23,19 +23,19 @@ class Circle {
     if (this.r <= 0) {
       return 0;
     }
-    return 3.14 * this.r * this.r;
+    return Math.ceil(3.14 * this.r * this.r);
   }
   getCircumference() {
     if (this.r <= 0) {
       return 0;
     }
-    return 2 * 3.14 * this.r;
+    return Math.ceil(2 * 3.14 * this.r);
   }
 };
 
 
 // -------- Do NOT edit anything above this line ----------
 
-let oneCircle = new Circle(parseFloat(readLine()));
+let oneCircle = new Circle(readLine());
 console.log(parseFloat(oneCircle.getArea()));
 console.log(parseFloat(oneCircle.getCircumference()));
