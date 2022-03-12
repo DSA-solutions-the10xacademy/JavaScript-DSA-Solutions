@@ -27,7 +27,7 @@ class Movie{
     }
   }
   run() {
-    var flag = "not ";
+    let flag = "not ";
     if (this.certify() === true) {
       flag = "";
     }
@@ -40,8 +40,8 @@ class Movie{
   }
 };
 
-var language = readLine();
-var numCharacters = readLine();
-var lengthInminutes = readLine();
+let language = readLine();
+let numCharacters = readLine();
+let lengthInminutes = readLine();
 
 console.log(new Movie(lengthInminutes, numCharacters, language).run());
