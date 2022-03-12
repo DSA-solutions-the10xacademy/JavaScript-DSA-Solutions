@@ -10,30 +10,30 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 class InputReader {
-  data = readLine();
-  constructor(Index) {
-    this.Index = Index;
+  readStrings(numInputs) {
+	for (let i = 0; i< numInputs; i++){
+		console.log(i + " " + readLine());
+	} 
   }
-  readStrings() {
-    console.log(this.Index + " " + this.data);
+  readIntegers(numInputs) {
+    for (let i = 0; i< numInputs; i++){
+		console.log(i + " " + parseInt(readLine()));
+	} 
   }
-  readIntegers() {
-    console.log(this.Index + " " + parseInt(this.data));
-  }
-  readFloats() {
-    console.log(this.Index + " " + parseFloat(this.data).toFixed(2));
+  readFloats(numInputs) {
+    for (let i = 0; i< numInputs; i++){
+		console.log(i + " " + parseFloat(readLine()).toFixed(2));
+	}
   }
 };
 
 let num = parseInt(readLine());
 let typeOfInput = readLine();
-for (let i = 0; i < num; i++) {
-	let NewInputReader = new InputReader(i)	
-	if (typeOfInput === "string") {
-		NewInputReader.readStrings();
-	} else if (typeOfInput === "integer") {
-		NewInputReader.readIntegers();
-	} else {
-		NewInputReader.readFloats();
-	}
+let NewInputReader = new InputReader();	
+if (typeOfInput === "string") {
+		NewInputReader.readStrings(num);
+} else if (typeOfInput === "integer") {
+		NewInputReader.readIntegers(num);
+} else {
+		NewInputReader.readFloats(num);
 }
