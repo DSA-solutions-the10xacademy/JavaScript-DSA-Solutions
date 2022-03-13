@@ -44,4 +44,5 @@ let language = readLine();
 let numCharacters = readLine();
 let lengthInminutes = readLine();
 
-console.log(new Movie(lengthInminutes, numCharacters, language).run());
+let movie =  new Movie(lengthInMinutes, numCharacters, language)
+console.log(movie.run());
