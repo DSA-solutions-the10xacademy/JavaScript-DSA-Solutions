@@ -10,6 +10,7 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 class InputReader {
+  //implement the methods here 
   readStrings(numInputs) {
 	for (let i = 0; i< numInputs; i++){
 		console.log(i + " " + readLine());
