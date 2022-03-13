@@ -10,8 +10,6 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 class BankAccount {
-  balance = 0;
-  // Optional Constructor
   constructor() {
     this.balance = 0;
   }
