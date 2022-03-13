@@ -10,17 +10,13 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 class Movie{
-  constructor(
-    lengthInminutes = 120,
-    numCharacters = 4,
-    language = "English"
-  ) {
-    this.lengthInminutes = lengthInminutes;
+  constructor() {
+    this.lengthInMinutes = lengthInMinutes;
     this.numCharacters = numCharacters;
     this.language = language;
   }
   certify() {
-    if (this.numCharacters >= 2 && this.lengthInminutes <= 240) {
+    if (this.numCharacters >= 2 && this.lengthInMinutes <= 240) {
       return true;
     } else {
       return false;
@@ -34,15 +30,15 @@ class Movie{
     let text = "This is a ";
     text = text + this.language + " movie with ";
     text = text + this.numCharacters + " characters, is ";
-    text = text + this.lengthInminutes + " minutes long, and is ";
+    text = text + this.lengthInMinutes + " minutes long, and is ";
     text = text + flag + "certified.";
     return text;
   }
 };
 
 let language = readLine();
-let numCharacters = readLine();
-let lengthInminutes = readLine();
+let numCharacters = parseInt(readLine());
+let lengthInMinutes = parseInt(readLine());
 
 let movie =  new Movie(lengthInMinutes, numCharacters, language)
 console.log(movie.run());
