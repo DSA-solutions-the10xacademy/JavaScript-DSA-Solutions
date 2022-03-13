@@ -9,7 +9,7 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
-class Movie{
+class Movie {
   constructor() {
     this.lengthInMinutes = lengthInMinutes;
     this.numCharacters = numCharacters;
