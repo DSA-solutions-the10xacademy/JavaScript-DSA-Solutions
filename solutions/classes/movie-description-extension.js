@@ -10,7 +10,7 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 class Movie {
-  constructor() {
+  constructor(lengthInMinutes, numCharacters, language) {
     this.lengthInMinutes = lengthInMinutes;
     this.numCharacters = numCharacters;
     this.language = language;
