@@ -32,7 +32,7 @@ class RobotMovement {
 let Num = parseInt(readLine());
 let myRobotMove = new RobotMovement();
 for (let index = 0; index  < Num; index ++) {
-  var currentMovement = readLine();
+  let currentMovement = readLine();
   if (currentMovement === "up") {
     myRobotMove.moveUp();
   } else if (currentMovement === "down") {
