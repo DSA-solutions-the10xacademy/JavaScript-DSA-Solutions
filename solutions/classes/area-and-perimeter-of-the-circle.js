@@ -36,6 +36,6 @@ class Circle {
 
 // -------- Do NOT edit anything above this line ----------
 
-let oneCircle = new Circle(readLine());
-console.log(parseFloat(oneCircle.getArea()));
-console.log(parseFloat(oneCircle.getCircumference()));
+let oneCircle = new Circle(parseInt(readLine()));
+console.log(oneCircle.getArea());
+console.log(oneCircle.getCircumference());
