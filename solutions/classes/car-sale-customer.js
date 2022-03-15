@@ -19,9 +19,9 @@ class CarSell {
   }
   getPromisingCustomers() {
     let promisingcustomers = [];
-    for (let price of this.customerProposals) {
-      if (price >= 900000) {
-        promisingcustomers.push(count);
+    for (let i=0;i<this.customerProposals.length;i++) {
+      if (this.customerProposals[i] >= 900000) {
+        promisingcustomers.push(i);
       }
     }
     if (promisingcustomers.length===0) {
