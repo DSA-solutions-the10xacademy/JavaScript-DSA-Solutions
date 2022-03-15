@@ -32,7 +32,7 @@ for (let index = 0; index < n ; index++) {
   let currentTransaction = readLine().split(" ");
   let typeOfTransaction = currentTransaction[0];
   let transactionAmount = parseInt(currentTransaction[1]);
-  if (typeOfTransaction == "d") {
+  if (typeOfTransaction === "d") {
     myAccount.debit(transactionAmount);
   } else {
     myAccount.credit(transactionAmount);
