@@ -10,36 +10,32 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
-
-
-
-
 // you should return a list of lists
-function transpose_matrix(lst){
+function transposeMatrix(matrix){
 	//implement this function
-	let answer=[[]]
-	for(let column=0;column<lst[0].length;column++)
+	let resultMatrix=[];
+	for(let column=0;column<matrix[0].length;column++)
 	{
-		let temporary=[]
-		for(let row=0;row<lst.length;row++)
+		let newRow=[];
+		for(let row=0;row<matrix.length;row++)
 		{
-			temporary.push(lst[row][column])
+			newRow.push(matrix[row][column]);
 		}
-		answer.push(temporary)
+		resultMatrix.push(newRow);
 	}
-	return answer
+	return resultMatrix;
 }
 
 
 
 // do not change anything below this line
-var h = parseInt(readLine())
-let lst = []
-for(let val=0;val<h;val++){
-	var row=readLine().replace(/\r/g,'').split(" ")
-	lst.push([...row])
+let m = parseInt(readLine());
+let lst = [];
+for(let val=0;val<m;val++){
+	let row=readLine().split(" ");
+	lst.push(row);
 }
-let out = transpose_matrix(lst)
-for(val of out){
-	console.log(...val)
+let result = transposeMatrix(lst);
+for(row of result){
+	console.log(...row);
 }
