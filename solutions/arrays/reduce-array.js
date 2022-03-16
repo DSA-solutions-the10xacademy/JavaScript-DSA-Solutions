@@ -10,30 +10,30 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let arraySize=parseInt(readLine())
-let arr=[]
+let arraySize=parseInt(readLine());
+let arr=[];
 for(let index=0;index<arraySize;index++)
 {
-	arr.push(parseInt(readLine()))
+	arr.push(parseInt(readLine()));
 }
 if(arraySize===1)
 {
-	console.log(arr[0])
+	console.log(arr[0]);
 }
 else
 {
-	let answer=arr[0]+arr[1];
-	for(let index=2;index<arraySize;index++)
+	let answer=arr[0];
+	for(let index=1;index<arraySize;index++)
 	{
 		if(index%2===0)
 		{
-			answer=answer-arr[index]
+			answer=answer-arr[index];
 		}
 		else if(index%2===1)
 		{
-			answer=answer+arr[index]
+			answer=answer+arr[index];
 		}
 		
 	}
-	console.log(answer)
+	console.log(answer);
 }
