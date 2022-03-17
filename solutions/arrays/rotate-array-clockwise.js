@@ -10,15 +10,15 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let arr=readLine().split(" ")
-let rotate=parseInt(readLine())
-while(rotate>0)
-{
-	let shifted=arr.shift()
-	arr.push(shifted)
+let arr = readLine().split(" ");
+let rotate = parseInt(readLine());
+
+while(rotate > 0){
+	let shifted = arr.shift();
+	arr.push(shifted);
 	rotate--;
 }
-for(let index=0;index<arr.length;index++)
-{
-	console.log(arr[index])
+
+for(let index = 0; index < arr.length; index++){
+	console.log(arr[index]);
 }
