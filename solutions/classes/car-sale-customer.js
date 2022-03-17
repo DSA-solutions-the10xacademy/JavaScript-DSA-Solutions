@@ -25,6 +25,7 @@ class CarSell {
       }
     }
     if (promisingcustomers.length===0) {
+      // If everyone is offering less than 90%, then we have to output -1
       promisingcustomers.push(-1);
     }
     return promisingcustomers;
