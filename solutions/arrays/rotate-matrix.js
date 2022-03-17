@@ -10,43 +10,30 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-function rotate(lst)
-{
-	console.log(lst[0].length)
-	let answer=[]
-	for(let column=0;column<lst[0].length;column++)
-	{
-		let temporaryArray=[]
-		for(let row=0;row<lst.length;row++)
-		{
-			temporaryArray.push(lst[row][column])
+function rotate(arr, numOfRows){
+	console.log(arr[0].length);
+	let matrix = [];
+	for (let column = 0; column < arr[0].length; column++){
+		let temporaryArray = [];
+		for (let row = numOfRows-1; row >= 0; row--){
+			temporaryArray.push(arr[row][column]);
 		}
-		answer.push(temporaryArray)
+		matrix.push(temporaryArray);
 	}
-    for(let row=0;row<answer.length;row++)
-    {
-        for(let column=0;column<answer[0].length/2;column++)
-        {
-            let temporary = answer[row][column];
-            answer[row][column]=answer[row][answer[0].length-1-column]
-            answer[row][answer[0].length-1-column]=temporary
-        }
-    }
-	return answer
+	return matrix
 }
-let val = parseInt(readLine())
-let lst = []
-for(let row=0;row<val;row++)
-{
-	let temporaryArray=readLine().split(" ");
-	for(let index=0;index<temporaryArray.length;index++)
-	{
-		temporaryArray[index]=parseInt(temporaryArray[index]);
+
+let numOfRows = parseInt(readLine());
+let arr = [];
+for(let row = 0; row < numOfRows; row++){
+	let temporaryArray = readLine().split(" ");
+	for(let index = 0; index < temporaryArray.length; index++){
+		temporaryArray[index] = parseInt(temporaryArray[index]);
 	}
-	lst.push(temporaryArray)
-    
+	arr.push(temporaryArray);
 }
-let out=rotate(lst)
-for(val of out){
-	console.log(...val)
+
+let rotatedMatrix = rotate(arr, numOfRows);
+for(row of rotatedMatrix){
+	console.log(...row);
 }
