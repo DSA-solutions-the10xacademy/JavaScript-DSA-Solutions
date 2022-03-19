@@ -12,16 +12,17 @@ function readLine() {
 
 function shuffle(arr){
     //Implement this function
-	let leftIndex=0,rightIndex=arr.length/2
-	let answer=[]
-	for(let index=0;index<arr.length/2;index++)
+	let leftIndex=0;
+	let rightIndex=arr.length/2;
+	let answer=[];
+	while(leftIndex < arr.length/2)
 	{
-		answer.push(arr[leftIndex])
-		answer.push(arr[rightIndex])
-		leftIndex = leftIndex+1
-		rightIndex = rightIndex+1
+		answer.push(arr[leftIndex]);
+		answer.push(arr[rightIndex]);
+		leftIndex = leftIndex+1;
+		rightIndex = rightIndex+1;
 	}
-	return answer
+	return answer;
 }
 
 // Do not edit anything below
