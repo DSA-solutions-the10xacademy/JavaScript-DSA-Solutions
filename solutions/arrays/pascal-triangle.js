@@ -10,28 +10,34 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let rowNumber = parseInt(readLine())
-if(rowNumber ===1)
+let N = parseInt(readLine());
+if(N ===1)
 {
 	console.log(1);
 }
 else
 {
-	let arr=[1]
-	for(let row=2;row<=rowNumber;row++)
+	let prevRow=[1];
+	for(let row=2;row<=N;row++)
 	{
-		let temporaryArray=[]
+		let currRow=[];
 		for(let column=1;column<=row;column++)
 		{
 			if(column===1)
-			temporaryArray.push(arr[0]);
+			{
+				currRow.push(prevRow[0]);
+			}
 			else if(column===row)
-			temporaryArray.push(arr[arr.length-1])
+			{
+				currRow.push(prevRow[prevRow.length-1]);
+			}
 			else
-			temporaryArray.push(arr[column-1]+arr[column-2])
+			{
+				currRow.push(prevRow[column-1]+prevRow[column-2]);
+			}
 		}
-		arr=temporaryArray
+		prevRow=currRow
 	}
-	for(let column=1;column<=rowNumber;column++)
-	console.log(arr[column-1])
+	for(let column=1;column<=N;column++)
+	console.log(prevRow[column-1])
 }
