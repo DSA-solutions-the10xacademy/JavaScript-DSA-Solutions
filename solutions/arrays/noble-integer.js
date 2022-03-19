@@ -10,25 +10,27 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let arraySize=parseInt(readLine())
-let arr=[]
+let arraySize=parseInt(readLine());
+let arr=[];
 for(let index=0;index<arraySize;index++)
 {
 	arr.push(parseInt(readLine()));
 }
-let answer=0;
-for(let index=0;index<arraySize;index++)
+let answer=-1;
+for(let focusedIndex=0;focusedIndex<arraySize;focusedIndex++)
 {
 	let count=0;
-	for(let index1=0;index1<arraySize;index1++)
+	for(let currIndex=0;currIndex<arraySize;currIndex++)
 	{
-		if(arr[index1]>arr[index])
-		count=count+1;
+		if(arr[currIndex]>arr[focusedIndex])
+		{
+			count=count+1;
+		}
 	}
-	if(count===arr[index])
-	answer=answer+1
+	if(count===arr[focusedIndex])
+		{
+			answer=1;
+			break;
+		}
 }
-if(answer===0)
-console.log(-1);
-else
-console.log(1);
+console.log(answer);
