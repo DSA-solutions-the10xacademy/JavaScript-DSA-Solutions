@@ -13,24 +13,15 @@ function readLine() {
 // name your function as change_diagonal and it should take list as input
 function change_diagonal(arr)
 {
-	for(let row=0;row<arr.length;row++)
+	for(let index=0;index<arr.length;index++)
 	{
-		for(let column=0;column<arr.length;column++)
+		if(arr[index][index] < 0)
 		{
-			if(row===column)
-
-			{
-				if(arr[row][column]<0)
-				{
-					arr[row][column]=0
-				}
-				else
-				{
-					arr[row][column]=1
-				}
-			}
-			
-
+			arr[index][index]=0;
+		}
+		else
+		{
+			arr[index][index]=1;
 		}
 	}
 	return arr;
