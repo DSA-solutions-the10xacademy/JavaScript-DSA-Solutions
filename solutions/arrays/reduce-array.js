@@ -10,8 +10,7 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let arraySize=parseInt(readLine())
-let arr=[]
+let n=parseInt(readLine())
 let answer=parseInt(readLine());
 if(arraySize===1)
 {
@@ -20,7 +19,7 @@ if(arraySize===1)
 else
 {
 	answer=answer+parseInt(readLine());
-	for(let index=2;index<arraySize;index++)
+	for(let index=2;index<nindex++)
 	{
 		if(index%2===0)
 		{
