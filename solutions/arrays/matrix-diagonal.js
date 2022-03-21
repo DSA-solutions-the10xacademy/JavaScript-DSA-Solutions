@@ -10,32 +10,38 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 
-// name your function as change_diagonal and it should take list as input
-function change_diagonal(arr)
-{
-	for(let index=0;index<arr.length;index++)
-	{
-		if(arr[index][index] < 0)
-		{
-			arr[index][index]=0;
-		}
-		else
-		{
-			arr[index][index]=1;
-		}
-	}
-	return arr;
+// name your function as changeDiagonal and it should take list as input
+
+function changeDiagonal(arr) {
+    for (let index = 0; index < arr.length; index++) {
+        if (arr[index][index] < 0) {
+            arr[index][index] = 0;
+        }
+        else {
+            arr[index][index] = 1;
+        }
+    }
+    return arr;
 }
-
-
 // Do not change anything below this line.
-let val = parseInt(readLine())
-let lst = []
-for(let index=0;index<val;index++){
-  let row=readLine().replace(/\r/g,'').split(' ')
-  lst.push([...row])
+
+//Converting string to intger
+function ConvertoInteger(arr) {
+    for (let index = 0; index < arr.length; index++) {
+        arr[index] = parseInt(arr[index]);
+    }
+    return arr;
 }
-let out = change_diagonal(lst)
-for(row of out){
-  console.log(...row)
+
+
+let n = parseInt(readLine());
+let matrix = [];
+for (let index = 0; index < n; index++) {
+    let row = readLine().split(" ");
+    row = ConvertoInteger(row);
+    matrix.push(row);
+}
+let newMatrix = changeDiagonal(matrix);
+for (row of newMatrix) {
+    console.log(...row);
 }
