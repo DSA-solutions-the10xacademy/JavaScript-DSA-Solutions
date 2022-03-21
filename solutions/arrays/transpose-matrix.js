@@ -11,31 +11,27 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 
 // you should return a list of lists
-function transposeMatrix(matrix){
-	//implement this function
-	let resultMatrix=[];
-	for(let column=0;column<matrix[0].length;column++)
-	{
-		let newRow=[];
-		for(let row=0;row<matrix.length;row++)
-		{
-			newRow.push(matrix[row][column]);
-		}
-		resultMatrix.push(newRow);
-	}
-	return resultMatrix;
+function transposeMatrix(matrix) {
+    //implement this function
+    let resultMatrix = [];
+    for (let colIndex = 0; colIndex < matrix[0].length; colIndex++) {
+        let newRow = [];
+        for (let rowIndex = 0; rowIndex < matrix.length; rowIndex++) {
+            newRow.push(matrix[rowIndex][colIndex]);
+        }
+        resultMatrix.push(newRow);
+    }
+    return resultMatrix;
 }
-
-
 
 // do not change anything below this line
 let m = parseInt(readLine());
-let lst = [];
-for(let val=0;val<m;val++){
-	let row=readLine().split(" ");
-	lst.push(row);
+let matrix = [];
+for (let index = 0; index < m; index++) {
+    let row = readLine().split(" ");
+    matrix.push(row);
 }
-let result = transposeMatrix(lst);
-for(row of result){
-	console.log(...row);
+let result = transposeMatrix(matrix);
+for (row of result) {
+    console.log(...row);
 }
