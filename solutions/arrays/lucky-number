@@ -1,0 +1,59 @@
+let fs = require("fs");
+let data = fs.readFileSync(0, 'utf-8');
+let idx = 0;
+data = data.split('\n');
+
+function readLine() {
+  idx++;
+  return data[idx - 1];
+}
+
+// -------- Do NOT edit anything above this line ----------
+
+function findLuckyNumber(nums){
+  // implement this function
+  
+
+// tle solution
+
+
+//   for(let index=0;index<nums.length;index++)
+//   {
+// 	  let count=1
+// 	  for(let index1=index+1;index1<nums.length;index1++)
+// 	  {
+// 		  if(nums[index]===nums[index1])
+// 		  {
+// 			  count=count+1
+// 		  }
+// 	  }
+// 	  if(count===nums[index])
+// 	  {
+// 		  return count
+// 	  }
+//   }
+//   return -1
+
+
+nums.sort(function(a, b){return a - b})
+for(let index=0;index<nums.length;index++)
+{
+	let index1=index+1
+	while(index1 < nums.length && nums[index]===nums[index1])
+	{
+		index1++;
+	}
+	if(nums[index]===index1-index)
+	return nums[index];
+	index=index1-1
+}
+return -1;
+
+}
+// DO NOT change anything below this line
+let num_elems = parseInt(readLine())
+let input_arr = []
+for(let index=0;index<num_elems;index++){
+  input_arr.push(parseInt(readLine()))    
+}
+console.log(findLuckyNumber(input_arr))
