@@ -13,7 +13,7 @@ function readLine() {
 let arrraySize = parseInt(readLine());
 let firstNumber=parseInt(readLine());
 
-let answer=-99999;
+let answer=Number.NEGATIVE_INFINITY;
 for(let index=0;index<arrraySize-1;index++)
 {
 	let  secondNumber=parseInt(readLine());
