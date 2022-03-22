@@ -20,15 +20,17 @@ for (let rowIndex = 0; rowIndex < numRows; rowIndex++) {
 	}
 	matrix.push(currRow);
 }
-console.log(matrix[0].length);
+
 let rotatedMatrix = [];
 for (let column = 0; column < matrix[0].length; column++) {
 	let newRow = [];
 	for (let row = matrix.length - 1; row >= 0; row--) {
-		newRow.push(matrix[row][column])
+		newRow.push(matrix[row][column]);
 	}
 	rotatedMatrix.push(newRow);
 }
+
+console.log(rotatedMatrix.length);
 for (row of rotatedMatrix) {
 	console.log(...row);
 }
