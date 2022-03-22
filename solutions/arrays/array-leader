@@ -10,18 +10,18 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-let arraySize = parseInt(readLine())
-let arr=[];
-for(let index=0;index<arraySize;index++)
+let arraySize = parseInt(readLine());
+let arr = [];
+for(let index = 0; index < arraySize; index++)
 {
 	arr.push(parseInt(readLine()));
 }
-let lastMaximum=0;
-for(let index=arraySize-1;index>=0;index--)
+let lastMaximum = 0;
+for(let index = arraySize-1; index >= 0; index--) // iterating from right to left
 {
 	if(arr[index] > lastMaximum)
 	{
 		console.log(arr[index]);
 	}
-	lastMaximum=Math.max(lastMaximum,arr[index]);
+	lastMaximum = Math.max(lastMaximum, arr[index]); // updating the maximum value from the right side of the array
 }
