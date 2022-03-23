@@ -32,13 +32,8 @@ let sumFirstDiagonal = 0;
 let sumSecondDiagonal = 0;
 
 for(let i = 0; i < matrix.length; i++){
-    let j = i;
-    sumFirstDiagonal += matrix[i][j];
-}
-
-for(let i = 0; i < matrix.length; i++){
-    let j = matrix.length - 1 - i;
-    sumSecondDiagonal += matrix[i][j];
+    sumFirstDiagonal += matrix[i][i];
+    sumSecondDiagonal += matrix[i][matrix.length - 1 - i];
 }
 
 console.log(sumFirstDiagonal + sumSecondDiagonal);
