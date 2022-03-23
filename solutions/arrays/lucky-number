@@ -35,7 +35,6 @@ function findLuckyNumber(nums){
 //   return -1
 
 
-nums.sort(function(a, b){return a - b})
 for(let index=0;index<nums.length;index++)
 {
 	let index1=index+1
