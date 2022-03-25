@@ -4,14 +4,15 @@ let idx = 0;
 data = data.split('\n');
 
 function readLine() {
-	idx++;
-	return data[idx - 1];
+  idx++;
+  return data[idx - 1];
 }
 
 // -------- Do NOT edit anything above this line ----------
 
-function findLuckyNumber(nums) {
-
+function findLuckyNumber(nums){
+  // implement this function
+  
 	let lastElement = -1, numberOfOccurences = 0;
 	for (let index = 0; index < nums.length; index++) {
 		if (nums[index] === lastElement) {
@@ -25,12 +26,11 @@ function findLuckyNumber(nums) {
 			return numberOfOccurences;
 	}
 	return -1;
-
 }
 // DO NOT change anything below this line
-let num_elems = parseInt(readLine())
-let input_arr = []
-for (let index = 0; index < num_elems; index++) {
-	input_arr.push(parseInt(readLine()))
+let numElems = parseInt(readLine());
+let inputArr = [];
+for(let index=0;index<numElems;index++){
+  inputArr.push(parseInt(readLine()));
 }
-console.log(findLuckyNumber(input_arr))
+console.log(findLuckyNumber(inputArr));
