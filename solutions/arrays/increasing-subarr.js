@@ -23,24 +23,24 @@ let numberOfInputs = parseInt(readLine());
 let list = readLine().split(" ");
 list = convertToNumber(list);
 
-let length = 1, count = 1, end = 1;
+let overallMaxLength = 1, currMaxLength = 1, endIndex = 1;
 
 for(let i = 1; i < numberOfInputs; i++){
     if(list[i] > list[i-1]){
-        count++;
+        currMaxLength++;
     }
     else{
-        if(count > length){
-            length = count;
-            end = i;
+        if(currMaxLength > overallMaxLength){
+            overallMaxLength = currMaxLength;
+            endIndex = i;
         }
-        count = 1;
+        currMaxLength = 1;
     }
 }
 
-if(count > length){
-    length = count;
-    end = numberOfInputs;
+if(currMaxLength > overallMaxLength){
+    overallMaxLength = currMaxLength;
+    endIndex = numberOfInputs;
 }
 
-console.log(length, end - length + 1, end);
+console.log(overallMaxLength, endIndex - overallMaxLength + 1, endIndex);
