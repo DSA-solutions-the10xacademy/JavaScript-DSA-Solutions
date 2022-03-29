@@ -11,12 +11,12 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 
 // name your function as rightToLeftDiagonal
-function rightToLeftDiagonal(lst) {
+function rightToLeftDiagonal(matrix) {
 	let row = 0;
-	let column = lst.length - 1;
+	let column = matrix.length - 1;
 	let answer = [];
 	while (column != -1) {
-		answer.push(lst[row][column]);
+		answer.push(matrix[row][column]);
 		row = row + 1;
 		column = column - 1;
 	}
