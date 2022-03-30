@@ -14,7 +14,9 @@ function readLine() {
 function f(operands, num, n){
 
     if(operands == n+1)
-        return 0;
+        {
+            return 0;
+        }
 
     let currentTerm = 1;
 
