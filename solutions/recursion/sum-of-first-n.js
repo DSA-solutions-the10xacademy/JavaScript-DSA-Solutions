@@ -12,16 +12,17 @@ function readLine() {
 
 function sumOfFirstN(n) {
 	//Implement this function
+	let recursiveSum = 0;
 	if (n === 1) {
-		return 1;
+		recursiveSum = 1;
 	}
 	else {
-		return n + sumOfFirstN(n - 1);
+		recursiveSum = n + sumOfFirstN(n - 1);
 	}
+	console.log(n, recursiveSum);
+	return recursiveSum;
 }
 
+
 let n = parseInt(readLine());
-for (let number = 1; number <= n; number++) {
-	console.log(number);
-	console.log(sumOfFirstN(number));
-}
+sumOfFirstN(n);
