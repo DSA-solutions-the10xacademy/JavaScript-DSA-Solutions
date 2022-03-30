@@ -26,12 +26,12 @@ function rightToLeftDiagonal(matrix) {
 
 // Do not change anything below this line
 let m = parseInt(readLine());
-let lst = [];
-for (let val = 0; val < m; val++) {
-	let row = readLine().split(" ");
-	lst.push(row);
+let matrix = [];
+for (let row = 0; row < m; row++) {
+	let rowElements = readLine().split(" ");
+	matrix.push(rowElements);
 }
-let res = rightToLeftDiagonal(lst);
-for (val of res) {
-	console.log(val);
+let result = rightToLeftDiagonal(matrix);
+for (element of result) {
+	console.log(element);
 }
