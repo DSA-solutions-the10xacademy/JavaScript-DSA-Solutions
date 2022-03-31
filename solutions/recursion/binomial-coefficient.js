@@ -12,7 +12,7 @@ function readLine() {
 
 
 
-function binomialCoeff(n, r) {
+function binomialCoefficient(n, r) {
     //Implement this function
     if (r > n) {
         return 0;
@@ -21,9 +21,8 @@ function binomialCoeff(n, r) {
         return 1;
     }
     else {
-        return binomialCoeff(n - 1, r - 1) + binomialCoeff(n - 1, r);
+        return binomialCoefficient(n - 1, r - 1) + binomialCoefficient(n - 1, r);
     }
-
 }
 
 let testCases = parseInt(readLine());
@@ -31,5 +30,5 @@ for (let index = 0; index < testCases; index++) {
     let input = readLine().split(" ");
     n = parseInt(input[0]);
     let r = parseInt(input[1]);
-    console.log(binomialCoeff(n, r));
+    console.log(binomialCoefficient(n, r));
 }
