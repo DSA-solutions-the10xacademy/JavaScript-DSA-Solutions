@@ -22,7 +22,6 @@ function numberOfWays(array, sum, index) {
     }
     return numberOfWays(array, sum, index + 1) + numberOfWays(array, sum - array[index], index + 1) + numberOfWays(array, sum + array[index], index + 1);
 }
-// -------- Do NOT edit anything below this line ----------
 let sum = parseInt(readLine());
 let arraySize = parseInt(readLine());
 let array = readLine().split(" ");
