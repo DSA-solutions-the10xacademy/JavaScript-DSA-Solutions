@@ -28,4 +28,4 @@ let array = readLine().split(" ");
 for (let i = 0; i < arraySize; i++){
 	array[i] = parseInt(array[i]);
 }
-console.log(numberOfWays(array, sum, 0))
+console.log(numberOfWays(array, sum, 0));
