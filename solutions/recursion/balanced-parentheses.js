@@ -12,19 +12,25 @@ function readLine() {
 
 function getAllBalancedParan(n) {
     // Implement this function
-    if (n == 1) return ["()"];
-    if (n > 1) {
-        let set = new Set();
-        getAllBalancedParan(n - 1).forEach((combination) => {
-            for (let index = 0; index < n; index++) {
-                set.add(
-                    combination.substring(0, index) + "()" + combination.substring(index)
-                );
-            }
-        });
-        n -= 1;
-        return Array.from(set);
+    let solution = []
+
+    function generateParantheses(openCount, closeCount, string) {
+        if (openCount > closeCount) {
+            return;
+        }
+        if (!openCount && !closeCount) {
+            solution.push(string);
+        }
+        if (openCount > 0) {
+            generateParantheses(openCount - 1, closeCount, string + "(");
+        }
+        if (closeCount > 0) {
+            generateParantheses(openCount, closeCount - 1, string + ")");
+        }
     }
+    generateParantheses(n, n, "");
+    return solution;
+
 }
 
 // Do not edit anything below
