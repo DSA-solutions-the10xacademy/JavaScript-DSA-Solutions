@@ -12,7 +12,7 @@ function readLine() {
 
 function gcd(dividend, divisor) {
   // Implement this function
-  if (divisor == 0) {
+  if (divisor === 0) {
     return dividend;
   }
   return gcd(divisor, dividend % divisor);
