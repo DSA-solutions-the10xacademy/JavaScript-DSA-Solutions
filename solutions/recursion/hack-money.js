@@ -21,8 +21,8 @@ function hackMoney(startMoney, targetMoney) {
 }
 let testCases = parseInt(readLine());
 for (let testCase = 0; testCase < testCases; testCase++) {
-    let n = parseInt(readLine());
-    let answer = hackMoney(1, n);
+    let targetMoney = parseInt(readLine());
+    let answer = hackMoney(1, targetMoney);
     if (answer === 1) {
         console.log("Yes");
     }
