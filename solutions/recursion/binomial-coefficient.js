@@ -28,7 +28,7 @@ function binomialCoefficient(n, r) {
 let testCases = parseInt(readLine());
 for (let index = 0; index < testCases; index++) {
     let input = readLine().split(" ");
-    n = parseInt(input[0]);
+    let n = parseInt(input[0]);
     let r = parseInt(input[1]);
     console.log(binomialCoefficient(n, r));
 }
