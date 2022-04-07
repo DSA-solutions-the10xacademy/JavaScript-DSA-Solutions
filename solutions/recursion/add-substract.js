@@ -13,19 +13,23 @@ function readLine() {
 function numberOfWays(array, sum, index) {
     let arraySize = array.length;
     if (index === arraySize) {
-        if (sum === 0) { 
-			return 1; 
-		}
+        if (sum === 0) {
+            return 1;
+        }
         else {
             return 0;
         }
     }
+    // For each element there are only 3 possibilities
+    // 1. It is not used for the target
+    // 2. It is used in subtraction
+    // 3. It is used in addition
     return numberOfWays(array, sum, index + 1) + numberOfWays(array, sum - array[index], index + 1) + numberOfWays(array, sum + array[index], index + 1);
 }
 let sum = parseInt(readLine());
 let arraySize = parseInt(readLine());
 let array = readLine().split(" ");
 for (let i = 0; i < arraySize; i++){
-	array[i] = parseInt(array[i]);
+    array[i] = parseInt(array[i]);
 }
 console.log(numberOfWays(array, sum, 0));
