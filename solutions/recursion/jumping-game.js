@@ -17,8 +17,11 @@ function minimumJumps(currentPosition, panels, numberOfPanels){
         return 0;
     }
 
-    return 1 + Math.min(minimumJumps(currentPosition + panels[currentPosition - 1], panels, numberOfPanels), 
-		minimumJumps(currentPosition + 1, panels, numberOfPanels));
+    let K = panels[currentPosition - 1];
+    let jumpKUnits = minimumJumps(currentPosition + K, panels, numberOfPanels);
+    let jumpOneUnit = minimumJumps(currentPosition + 1, panels, numberOfPanels);
+    
+    return 1 + Math.min(jumpKUnits, jumpOneUnit);
 }
 
 
