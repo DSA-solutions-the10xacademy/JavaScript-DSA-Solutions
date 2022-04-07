@@ -16,8 +16,10 @@ function f(n) {
         return 1;
     }
 
+    let firstInteger =  n * (n - 1) / 2 + 1;
+    let lastInteger = firstInteger + (n -1);
     let currentTerm = 1;
-    for (let i = n * (n - 1) / 2 + 1; i <= n * (n - 1) / 2 + n; i++) {
+    for (let i = firstInteger; i <= lastInteger; i++) {
         currentTerm *= i;
     }
     return currentTerm + f(n - 1);
