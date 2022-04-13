@@ -14,7 +14,7 @@ function bothCountX(string1, string2, x) {
     // Complete this function, and return the list of resultant characters in sorted order
     string1 = string1.toLowerCase();
     string2 = string2.toLowerCase();
-    var dictionary1 = {};
+    let dictionary1 = {};
     for (let i = 0; i < string1.length; i++) {
         if (string1[i] in dictionary1)
             dictionary1[string1[i]] = dictionary1[string1[i]] + 1;
@@ -22,7 +22,7 @@ function bothCountX(string1, string2, x) {
         else
             dictionary1[string1[i]] = 1;
     }
-    var dictionary2 = {};
+    let dictionary2 = {};
     for (let i = 0; i < string2.length; i++) {
         if (string2[i] in dictionary2)
             dictionary2[string2[i]] = dictionary2[string2[i]] + 1;
