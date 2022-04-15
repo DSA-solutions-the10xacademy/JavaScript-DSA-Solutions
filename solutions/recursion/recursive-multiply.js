@@ -10,23 +10,19 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
-function recursiveMultiply(n) {
-    if (n < 0) {
-        return recursiveMultiply(Math.abs(n));
+function productOfDigits(n) {
+    if(n<10)
+    {
+        return n;
     }
-    if (n === 0) {
-        return 1;
-    }
-    return n % 10 * recursiveMultiply(parseInt(n / 10));
+    else{
+    let rightMostDigit = n % 10;
+    let remainingNumber = parseInt(n / 10);
+    return rightMostDigit * productOfDigits(remainingNumber );}
 }
-let t = parseInt(readLine());
-for (let testCase = 0; testCase < t; testCase++) {
+let numTests = parseInt(readLine());
+for (let testIndex = 0; testIndex < numTests; testIndex++) {
     let n = parseInt(readLine());
-    if (n === 0) {
-        console.log(0);
-    }
-    else {
-        let answer = recursiveMultiply(n);
-        console.log(answer);
-    }
+    let answer = productOfDigits(Math.abs(n));
+    console.log(answer);
 }
