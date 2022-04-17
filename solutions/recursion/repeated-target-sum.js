@@ -13,9 +13,12 @@ function readLine() {
 
 function numberOfWays(elements, key, numberOfElements, currentIndex, currentSum, taken) {
 
+    // checking if the current sum exceeded the target sum 
+    // or if we crossed the right boundary of the input array
     if (currentSum > key || currentIndex > numberOfElements) {
         return 0;
     }
+
     if (currentIndex == numberOfElements) {
         if (currentSum == key) {
             return 1;
@@ -26,11 +29,13 @@ function numberOfWays(elements, key, numberOfElements, currentIndex, currentSum,
 
     let totalNumberOfWays = 0;
 
+    // checking if the current element has not been added even once to the current sum
     if (!taken)
         totalNumberOfWays += numberOfWays(elements, key, numberOfElements, currentIndex + 1, currentSum, 0);
 
     totalNumberOfWays += numberOfWays(elements, key, numberOfElements, currentIndex + 1, currentSum + elements[currentIndex], 0);
 
+    // checking if current sum + current element is less than our target sum
     if (currentSum + elements[currentIndex] < key)
         totalNumberOfWays += numberOfWays(elements, key, numberOfElements, currentIndex, currentSum + elements[currentIndex], 1);
 
