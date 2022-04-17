@@ -27,32 +27,32 @@ for (let i = 0; i < lengthOfArray2; i++) {
     array2[i] = parseInt(readLine());
 }
 
-const array1Frequency = new Map();
+let array1Frequency = {};
 
 for (let i = 0; i < lengthOfArray1; i++) {
-    if (array1Frequency.has(array1[i])) {
-        array1Frequency.set(array1[i], array1Frequency.get(array1[i]) + 1);
+    if (array1[i] in array1Frequency) {
+        array1Frequency[array1[i]] = array1Frequency[array1[i]] + 1;
     } else {
-        array1Frequency.set(array1[i], 1);
+        array1Frequency[array1[i]] = 1;
     }
 }
 
-const array2Frequency = new Map();
+let array2Frequency = {};
 
 for (let i = 0; i < lengthOfArray2; i++) {
-    if (array2Frequency.has(array2[i])) {
-        array2Frequency.set(array2[i], array1Frequency.get(array2[i]) + 1);
+    if (array2[i] in array2Frequency) {
+        array2Frequency[array2[i]] = array2Frequency[array2[i]] + 1;
     } else {
-        array2Frequency.set(array2[i], 1);
+        array2Frequency[array2[i]] = 1;
     }
 }
 
 let intersectionOfArrays = [];
 
-for (const key of array1Frequency.keys()) {
-    if (array2Frequency.has(key)) {
-        let numberOfCommonAppearances = Math.min(array1Frequency.get(key),array2Frequency.get(key));
-        while(numberOfCommonAppearances--){
+for (let key in array1Frequency) {
+    if (key in array2Frequency) {
+        let numberOfCommonAppearances = Math.min(array1Frequency[key], array2Frequency[key]);
+        while (numberOfCommonAppearances--) {
             intersectionOfArrays.push(key);
         }
     }
