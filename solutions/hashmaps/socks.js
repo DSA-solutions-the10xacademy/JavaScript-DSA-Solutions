@@ -19,20 +19,20 @@ for (let i = 0; i < totalNumberOfSocks; i++) {
     socks[i] = parseInt(socks[i]);
 }
 
-const colorFrequency = new Map();
+let colorFrequency = {};
 
 for (let i = 0; i < totalNumberOfSocks; i++) {
-    if (colorFrequency.has(socks[i])) {
-        colorFrequency.set(socks[i], colorFrequency.get(socks[i]) + 1);
+    if (socks[i] in colorFrequency) {
+        colorFrequency[socks[i]] = colorFrequency[socks[i]] + 1;
     } else {
-        colorFrequency.set(socks[i], 1);
+        colorFrequency[socks[i]] = 1;
     }
 }
 
 let pairsOfSocks = 0;
 
-for(const socksOfOneColour of colorFrequency.values()){
-    pairsOfSocks += parseInt(socksOfOneColour / 2);
+for(let color in colorFrequency){
+    pairsOfSocks += parseInt(colorFrequency[color] / 2);
 }
 
 console.log(pairsOfSocks);
