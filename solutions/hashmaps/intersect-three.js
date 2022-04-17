@@ -35,40 +35,40 @@ for (let i = 0; i < lengthOfArray3; i++) {
     array3[i] = parseInt(readLine());
 }
 
-const array1Frequency = new Map();
+let array1Frequency = {};
 
 for (let i = 0; i < lengthOfArray1; i++) {
-    if (array1Frequency.has(array1[i])) {
-        array1Frequency.set(array1[i], array1Frequency.get(array1[i]) + 1);
+    if (array1[i] in array1Frequency) {
+        array1Frequency[array1[i]] = array1Frequency[array1[i]] + 1;
     } else {
-        array1Frequency.set(array1[i], 1);
+        array1Frequency[array1[i]] = 1;
     }
 }
 
-const array2Frequency = new Map();
+let array2Frequency = {};
 
 for (let i = 0; i < lengthOfArray2; i++) {
-    if (array2Frequency.has(array2[i])) {
-        array2Frequency.set(array2[i], array1Frequency.get(array2[i]) + 1);
+    if (array2[i] in array2Frequency) {
+        array2Frequency[array2[i]] = array2Frequency[array2[i]] + 1;
     } else {
-        array2Frequency.set(array2[i], 1);
+        array2Frequency[array2[i]] = 1;
     }
 }
 
-const array3Frequency = new Map();
+let array3Frequency = {};
 
 for (let i = 0; i < lengthOfArray3; i++) {
-    if (array3Frequency.has(array3[i])) {
-        array3Frequency.set(array3[i], array1Frequency.get(array3[i]) + 1);
+    if (array3[i] in array3Frequency) {
+        array3Frequency[array3[i]] = array3Frequency[array3[i]] + 1;
     } else {
-        array3Frequency.set(array3[i], 1);
+        array3Frequency[array3[i]] = 1;
     }
 }
 
 let intersectionOfArrays = [];
 
 for (let i = 1; i <= 2000; i++) {
-    if (array1Frequency.has(i) && array2Frequency.has(i) && array3Frequency.has(i)) {
+    if (i in array1Frequency && i in array2Frequency && i in array3Frequency) {
         intersectionOfArrays.push(i);
     }
 }
