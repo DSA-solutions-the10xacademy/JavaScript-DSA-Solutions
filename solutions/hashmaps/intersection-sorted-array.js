@@ -9,61 +9,61 @@ function readLine() {
 }
 
 // -------- Do NOT edit anything above this line ----------
-// Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-let lengthOfArray1 = parseInt(readLine());
+function intersect(arr1, arr2) {
+    // implement this function
+    let array1Frequency = {};
 
-let array1 = [];
-
-for (let i = 0; i < lengthOfArray1; i++) {
-    array1[i] = parseInt(readLine());
-}
-
-let lengthOfArray2 = parseInt(readLine());
-
-let array2 = [];
-
-for (let i = 0; i < lengthOfArray2; i++) {
-    array2[i] = parseInt(readLine());
-}
-
-let array1Frequency = {};
-
-for (let i = 0; i < lengthOfArray1; i++) {
-    if (array1[i] in array1Frequency) {
-        array1Frequency[array1[i]] = array1Frequency[array1[i]] + 1;
-    } else {
-        array1Frequency[array1[i]] = 1;
-    }
-}
-
-let array2Frequency = {};
-
-for (let i = 0; i < lengthOfArray2; i++) {
-    if (array2[i] in array2Frequency) {
-        array2Frequency[array2[i]] = array2Frequency[array2[i]] + 1;
-    } else {
-        array2Frequency[array2[i]] = 1;
-    }
-}
-
-let intersectionOfArrays = [];
-
-for (let key in array1Frequency) {
-    if (key in array2Frequency) {
-        let numberOfCommonAppearances = Math.min(array1Frequency[key], array2Frequency[key]);
-        while (numberOfCommonAppearances--) {
-            intersectionOfArrays.push(key);
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] in array1Frequency) {
+            array1Frequency[arr1[i]] = array1Frequency[arr1[i]] + 1;
+        } else {
+            array1Frequency[arr1[i]] = 1;
         }
     }
-}
 
-if (intersectionOfArrays.length == 0) {
-    console.log(-1);
-} else {
-    for (let i = 0; i < intersectionOfArrays.length; i++) {
-        console.log(intersectionOfArrays[i]);
+    let array2Frequency = {};
+
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr2[i] in array2Frequency) {
+            array2Frequency[arr2[i]] = array2Frequency[arr2[i]] + 1;
+        } else {
+            array2Frequency[arr2[i]] = 1;
+        }
     }
+
+    let intersectionOfArrays = [];
+
+    for (let key in array1Frequency) {
+        if (key in array2Frequency) {
+            let numberOfCommonAppearances = Math.min(array1Frequency[key], array2Frequency[key]);
+            while (numberOfCommonAppearances--) {
+                intersectionOfArrays.push(key);
+            }
+        }
+    }
+
+    if (intersectionOfArrays.length == 0) {
+        return [-1];
+    } 
+
+    return intersectionOfArrays;
 }
 
 
+// DO NOT change anything below this line
+let lenOfArr1 = parseInt(readLine());
+let arr1 = [];
+for (let index = 0; index < lenOfArr1; index++) {
+    arr1.push(parseInt(readLine()));
+}
+let lenOfArr2 = parseInt(readLine());
+let arr2 = [];
+for (let index = 0; index < lenOfArr2; index++) {
+    arr2.push(parseInt(readLine()));
+}
+
+let intersectionOFArrays = intersect(arr1, arr2);
+for (let index = 0; index < intersectionOFArrays.length; index++) {
+    console.log(intersectionOFArrays[index]);
+}
