@@ -12,33 +12,23 @@ function readLine() {
 
 function intersect(arr1, arr2) {
     // implement this function
-    let array1Frequency = {};
+    let frequency = {};
 
     for (let i = 0; i < arr1.length; i++) {
-        if (arr1[i] in array1Frequency) {
-            array1Frequency[arr1[i]] = array1Frequency[arr1[i]] + 1;
+        if (arr1[i] in frequency) {
+            frequency[arr1[i]] = frequency[arr1[i]] + 1;
         } else {
-            array1Frequency[arr1[i]] = 1;
-        }
-    }
-
-    let array2Frequency = {};
-
-    for (let i = 0; i < arr2.length; i++) {
-        if (arr2[i] in array2Frequency) {
-            array2Frequency[arr2[i]] = array2Frequency[arr2[i]] + 1;
-        } else {
-            array2Frequency[arr2[i]] = 1;
+            frequency[arr1[i]] = 1;
         }
     }
 
     let intersectionOfArrays = [];
 
-    for (let key in array1Frequency) {
-        if (key in array2Frequency) {
-            let numberOfCommonAppearances = Math.min(array1Frequency[key], array2Frequency[key]);
-            while (numberOfCommonAppearances--) {
-                intersectionOfArrays.push(key);
+    for (let i = 0; i < arr2.length; i++) {
+        if (arr2[i] in frequency) {
+            if(frequency[arr2[i]] > 0){
+                intersectionOfArrays.push(arr2[i]);
+                frequency[arr2[i]]--;
             }
         }
     }
