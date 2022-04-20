@@ -4,8 +4,8 @@ let idx = 0;
 data = data.split('\n');
 
 function readLine() {
-  idx++;
-  return data[idx - 1];
+    idx++;
+    return data[idx - 1];
 }
 
 // -------- Do NOT edit anything above this line ----------
@@ -14,8 +14,8 @@ function readLine() {
 length = parseInt(readLine());
 breadth = parseInt(readLine());
 
-if(length <= 0 || breadth <= 0){
+if (length <= 0 || breadth <= 0) {
     console.log(0);
 } else {
-    console.log(2*(length+breadth));
+    console.log(2 * (length + breadth));
 }
