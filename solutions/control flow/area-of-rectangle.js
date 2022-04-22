@@ -14,8 +14,11 @@ function readLine() {
 length = parseInt(readLine());
 breadth = parseInt(readLine());
 
-if(length < 0 || breadth < 0){
-    console.log(0);
+if (length < 0) {
+  console.log(0);
+}
+else if (breadth < 0) {
+  console.log(0);
 } else {
-    console.log(length*breadth);
+  console.log(length * breadth);
 }
