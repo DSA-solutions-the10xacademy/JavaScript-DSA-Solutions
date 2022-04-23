@@ -11,21 +11,21 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-A = readLine().split(" ");
+let A = readLine().split(" ");
 
-a1 = parseInt(A[0]);
-a2 = parseInt(A[1]);
-a3 = parseInt(A[2]);
+let a1 = parseInt(A[0]);
+let a2 = parseInt(A[1]);
+let a3 = parseInt(A[2]);
 
-B = readLine().split(" ");
+let B = readLine().split(" ");
 
-b1 = parseInt(B[0]);
-b2 = parseInt(B[1]);
-b3 = parseInt(B[2]);
+let b1 = parseInt(B[0]);
+let b2 = parseInt(B[1]);
+let b3 = parseInt(B[2]);
 
-AdotB = a1 * b1 + a2 * b2 + a3 * b3;
+let AdotB = a1 * b1 + a2 * b2 + a3 * b3;
 
-ModulusOfACrossB = Math.sqrt((a2 * b3 - a3 * b2) * (a2 * b3 - a3 * b2)
+let ModulusOfACrossB = Math.sqrt((a2 * b3 - a3 * b2) * (a2 * b3 - a3 * b2)
     + (a1 * b3 - b1 * a3) * (a1 * b3 - b1 * a3)
     + (a1 * b2 - a2 * b1) * (a1 * b2 - a2 * b1));
 
