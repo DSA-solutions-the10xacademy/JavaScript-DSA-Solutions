@@ -11,7 +11,7 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-testCases = parseInt(readLine());
+let testCases = parseInt(readLine());
 
 for (let i = 0; i < testCases; i++) {
     coordinates = readLine().split(" ");
