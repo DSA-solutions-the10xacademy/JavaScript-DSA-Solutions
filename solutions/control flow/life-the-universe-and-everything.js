@@ -11,7 +11,7 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-inputNumber = parseInt(readLine());
+let inputNumber = parseInt(readLine());
 
 while(inputNumber != 42){
     console.log(inputNumber);
