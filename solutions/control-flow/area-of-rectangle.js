@@ -11,8 +11,8 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-length = parseInt(readLine());
-breadth = parseInt(readLine());
+let length = parseInt(readLine());
+let breadth = parseInt(readLine());
 
 if (length < 0) {
   console.log(0);
