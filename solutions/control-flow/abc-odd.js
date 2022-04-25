@@ -16,7 +16,7 @@ let aAndb = readLine().split(" ");
 let a = parseInt(aAndb[0]);
 let b = parseInt(aAndb[1]);
 
-if ((a * b) % 2 == 0) {
+if ((a * b) % 2 === 0) {
     console.log("No");
 } else {
     console.log("Yes");
