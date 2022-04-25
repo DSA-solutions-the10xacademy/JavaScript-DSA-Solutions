@@ -11,11 +11,10 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-let totalCarsAndCarNumberFromFront = readLine().split(" ");
+let inputs = readLine().split(" ");
 
-totalCars = parseInt(totalCarsAndCarNumberFromFront[0]);
-carNumberFromFront = parseInt(totalCarsAndCarNumberFromFront[1]);
-
-carNumberFromBack = totalCars - carNumberFromFront + 1;
+let totalCars = parseInt(inputs[0]);
+let carNumberFromFront = parseInt(inputs[1]);
+let carNumberFromBack = totalCars - carNumberFromFront + 1;
 
 console.log(carNumberFromBack);
