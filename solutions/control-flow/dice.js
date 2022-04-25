@@ -11,8 +11,8 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-numberOnTheTopFace = parseInt(readLine());
+let numberOnTheTopFace = parseInt(readLine());
 
-numberOnTheBottom = 7 - numberOnTheTopFace;
+let numberOnTheBottom = 7 - numberOnTheTopFace;
 
 console.log(numberOnTheBottom);
