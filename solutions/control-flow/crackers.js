@@ -11,13 +11,13 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-crackersAndUsers = readLine().split(" ");
+let crackersAndUsers = readLine().split(" ");
 
-numberOfCrackers = parseInt(crackersAndUsers[0]);
+let numberOfCrackers = parseInt(crackersAndUsers[0]);
 
-numberOfUsers = parseInt(crackersAndUsers[1]);
+let numberOfUsers = parseInt(crackersAndUsers[1]);
 
-if (numberOfCrackers % numberOfUsers == 0) {
+if (numberOfCrackers % numberOfUsers === 0) {
     console.log(0);
 } else {
     console.log(1);
