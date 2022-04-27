@@ -16,7 +16,12 @@ function isPalindrome(str,low,high)
 		return true
 	}
 	else{
-		return str[low]==str[high] && isPalindrome(str,low+1,high-1)
+		if(str[low]==str[high] && isPalindrome(str,low+1,high-1)){
+			return true
+		}
+		else{
+			return false
+		}
 	}
 }
 let t=parseInt(readLine())
