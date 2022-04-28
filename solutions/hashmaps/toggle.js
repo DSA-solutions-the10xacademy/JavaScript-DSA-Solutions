@@ -11,10 +11,10 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-word = readLine();
+let word = readLine();
 
-giveLowerCase = {};
-giveUpperCase = {};
+let giveLowerCase = {};
+let giveUpperCase = {};
 
 for(let i = 97, j = 65 ; i < 123, j < 91; i++, j++){
     giveLowerCase[String.fromCharCode(j)] = String.fromCharCode(i);
