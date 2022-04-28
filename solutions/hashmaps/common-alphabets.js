@@ -11,12 +11,12 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-numberOfStrings = parseInt(readLine());
-commonAlphabets = {};
+let numberOfStrings = parseInt(readLine());
+let commonAlphabets = {};
 
 for (let i = 0; i < numberOfStrings; i++) {
-    currentString = readLine();
-    currentAlphabets = {};
+    let currentString = readLine();
+    let currentAlphabets = {};
 
     if (i == 0) {
         for (let j = 0; j < currentString.length; j++) {
