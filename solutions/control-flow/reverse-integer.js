@@ -9,19 +9,19 @@ function readLine() {
 }
 let n = parseInt(readLine());
 let temp = n;
-let rev = 0;
+let reverse = 0;
 if (temp < 0) {
   temp = temp * -1;
 }
 while (temp > 0) {
-  let d = temp % 10;
-  rev = rev * 10 + d;
-  temp = Math.floor(temp / 10);
+  let digit = temp % 10;
+  reverse = reverse * 10 + digit;
+  temp = parseInt(temp / 10);
 }
 if (n < 0) {
-  console.log(-1 * rev);
+  console.log(-1 * reverse);
 } else {
-  console.log(rev);
+  console.log(reverse);
 }
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
