@@ -14,9 +14,9 @@ function readLine() {
 let testCases = parseInt(readLine());
 
 for (let i = 0; i < testCases; i++) {
-    coordinates = readLine().split(" ");
-    xCooordinate = coordinates[0];
-    yCoordinate = coordinates[1];
+    let coordinates = readLine().split(" ");
+    let xCooordinate = coordinates[0];
+    let yCoordinate = coordinates[1];
 
     if (xCooordinate > 0 && yCoordinate > 0) {
         console.log("Q1");
