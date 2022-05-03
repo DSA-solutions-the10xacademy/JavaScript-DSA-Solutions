@@ -19,11 +19,11 @@ let l = string.length;
 if (l == 1) {
   console.log(string);
 } else {
-  let res_string = "";
-  res_string += string;
+  let resString = "";
+  resString += string;
 
   for (let i = N; i < l; i++) {
-    res_string += string[l - i - 1];
+    resString += string[l - i - 1];
   }
-  console.log(res_string);
+  console.log(resString);
 }
