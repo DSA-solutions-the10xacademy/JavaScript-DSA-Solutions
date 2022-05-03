@@ -13,26 +13,26 @@ function readLine() {
 
 let string = readLine();
 
-let max_length = 0;
-let curr_length = 1;
+let maxLength = 0;
+let currLength = 1;
 
 for (let i = 0; i < string.length - 1; i++) {
   if (string[i] == string[i + 1]) {
-    curr_length++;
+    currLength++;
   } else {
-    if (max_length < curr_length) {
-      max_length = curr_length;
+    if (maxLength < currLength) {
+      maxLength = currLength;
     }
-    curr_length = 1;
+    currLength = 1;
   }
 }
 
-if (max_length < curr_length) {
-  max_length = curr_length;
+if (maxLength < currLength) {
+  maxLength = currLength;
 }
 
 if (string.length == 0) {
   console.log(0);
 } else {
-  console.log(max_length);
+  console.log(maxLength);
 }
