@@ -12,16 +12,13 @@ function readLine() {
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
 let n = parseInt(readLine());
-let arr = [];
-for (let i = 0; i < n; i++) {
-  arr.push(parseInt(readLine()));
-}
 
 let sum = 0;
 
 for (let i = 0; i < n; i++) {
-  if (arr[i] > 0) {
-    sum += arr[i];
+  let num = parseInt(readLine());
+  if (num > 0) {
+    sum += num;
   }
 }
 
