@@ -13,14 +13,14 @@ function readLine() {
 
 let string = readLine();
 
-let modified_string = "";
+let modifiedString = "";
 
 for (let i = 0; i < string.length; i++) {
   if (string[i] == " ") {
-    modified_string += "spaceX";
+    modifiedString += "spaceX";
   } else {
-    modified_string += string[i];
+    modifiedString += string[i];
   }
 }
 
-console.log(modified_string);
+console.log(modifiedString);
