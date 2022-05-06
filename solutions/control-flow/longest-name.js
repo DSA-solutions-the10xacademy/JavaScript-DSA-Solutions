@@ -12,17 +12,17 @@ function readLine() {
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
 let n = parseInt(readLine());
-let string_arr = readLine().split(" ");
+let stringArr = readLine().split(" ");
 
-let max_length = 0;
-let res_string = "";
+let maxLength = 0;
+let resString = "";
 
 for (let i = 0; i < n; i++) {
-  let curr_length = string_arr[i].length;
-  if (max_length <= curr_length) {
-    max_length = curr_length;
-    res_string = string_arr[i];
+  let currLength = stringArr[i].length;
+  if (maxLength <= currLength) {
+    maxLength = currLength;
+    resString = stringArr[i];
   }
 }
 
-console.log(res_string);
+console.log(resString);
