@@ -12,13 +12,15 @@ function readLine() {
 
 // name your function as rightToLeftDiagonal
 function rightToLeftDiagonal(matrix) {
-	let row = 0;
-	let column = matrix.length - 1;
+	let numRows = matrix.length;
+	// Anti-diagonal starts from first row, last column
+	let rowIndex = 0; // First row
+	let colIndex = numRows - 1; // Last column
 	let answer = [];
-	while (column != -1) {
-		answer.push(matrix[row][column]);
-		row = row + 1;
-		column = column - 1;
+	while (rowIndex < numRows) {
+		answer.push(matrix[rowIndex][colIndex]);
+		rowIndex = rowIndex + 1;
+		colIndex = colIndex - 1;
 	}
 	return answer;
 }
