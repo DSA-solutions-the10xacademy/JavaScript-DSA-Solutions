@@ -11,5 +11,5 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 let inputArray = readLine().split(" ");
-let answer=inputArray[inputArray.length-1].length;
-console.log(answer);
+let lastWord = inputArray[inputArray.length - 1];
+console.log(lastWord.length);
