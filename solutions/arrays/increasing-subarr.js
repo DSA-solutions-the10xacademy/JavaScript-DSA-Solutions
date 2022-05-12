@@ -23,7 +23,7 @@ let numberOfInputs = parseInt(readLine());
 let list = readLine().split(" ");
 list = convertToNumber(list);
 
-let overallMaxLength = 1, currMaxLength = 1, endIndex = 1;
+let overallMaxLength = 1, currMaxLength = 1, endIndex = 0;
 
 for(let i = 1; i < numberOfInputs; i++){
     if(list[i] > list[i-1]){
@@ -32,7 +32,7 @@ for(let i = 1; i < numberOfInputs; i++){
     else{
         if(currMaxLength > overallMaxLength){
             overallMaxLength = currMaxLength;
-            endIndex = i;
+            endIndex = i - 1;
         }
         currMaxLength = 1;
     }
@@ -40,7 +40,7 @@ for(let i = 1; i < numberOfInputs; i++){
 
 if(currMaxLength > overallMaxLength){
     overallMaxLength = currMaxLength;
-    endIndex = numberOfInputs;
+    endIndex = numberOfInputs - 1;
 }
 
 console.log(overallMaxLength, endIndex - overallMaxLength + 1, endIndex);
