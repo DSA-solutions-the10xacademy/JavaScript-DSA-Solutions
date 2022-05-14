@@ -15,13 +15,26 @@ let nums = [];
 for (let idx = 0; idx < arraySize; idx++) {
   nums.push(parseInt(readLine()));
 }
-let index = [];
+let index = []
 for (let idx = 0; idx < arraySize; idx++) {
   index.push(parseInt(readLine()));
 }
-let answer = [];
+let answer = []
 for (let idx = 0; idx < arraySize; idx++) {
-  answer.splice(index[idx], 0, nums[idx]);
+  let temporaryArray = [];
+  let answerIndex = 0;
+  let temporaryIndex = 0;
+  while (temporaryIndex <= answer.length) {
+    if (temporaryIndex === index[idx]) {
+      temporaryArray.push(nums[idx]);
+    }
+    else {
+      temporaryArray.push(answer[answerIndex]);
+      answerIndex = answerIndex + 1;
+    }
+    temporaryIndex = temporaryIndex + 1;
+  }
+  answer = temporaryArray;
 }
 for (let idx = 0; idx < arraySize; idx++) {
   console.log(answer[idx]);
