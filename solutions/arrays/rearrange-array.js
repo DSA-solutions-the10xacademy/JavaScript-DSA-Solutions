@@ -11,31 +11,32 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 let arraySize = parseInt(readLine());
+
 let nums = [];
 for (let idx = 0; idx < arraySize; idx++) {
-  nums.push(parseInt(readLine()));
+    nums.push(parseInt(readLine()));
 }
-let index = []
+
+let indices = [];
 for (let idx = 0; idx < arraySize; idx++) {
-  index.push(parseInt(readLine()));
+    indices.push(parseInt(readLine()));
 }
-let answer = []
+
+let target = [];
 for (let idx = 0; idx < arraySize; idx++) {
-  let temporaryArray = [];
-  let answerIndex = 0;
-  let temporaryIndex = 0;
-  while (temporaryIndex <= answer.length) {
-    if (temporaryIndex === index[idx]) {
-      temporaryArray.push(nums[idx]);
+    let currElement = nums[idx];
+    let targetIndex = indices[idx];
+    // We need to insert currElement at targetIndex
+    // But, we cannot create additional space in the middle of an array
+    // So, we will first insert currElement at the end of target
+    // Then, we will shift it towards left, one index at a time
+    target.push(currElement);
+    for (let pos = target.length - 1; pos > targetIndex; pos--) {
+        target[pos] = target[pos - 1];
+        target[pos - 1] = currElement;
     }
-    else {
-      temporaryArray.push(answer[answerIndex]);
-      answerIndex = answerIndex + 1;
-    }
-    temporaryIndex = temporaryIndex + 1;
-  }
-  answer = temporaryArray;
 }
+
 for (let idx = 0; idx < arraySize; idx++) {
-  console.log(answer[idx]);
+    console.log(target[idx]);
 }
