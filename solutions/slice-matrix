@@ -20,11 +20,11 @@ for(let row=0;row<rows;row++)
 	array.push(temporaryArray);
 }
 let margins = readLine().split(" ").map(Number);
-let answer = [];
-for(let row = margins[2]-1;row < margins[3]; row++)
+let answer=[];
+for(let row=margins[2]-1;row<margins[3];row++)
 {
 	let temporaryArray=[];
-	for(let column = margins[0]-1; column < margins[1]; column++)
+	for(let column=margins[0]-1;column<margins[1];column++)
 	{
 		temporaryArray.push(array[row][column]);
 	}
