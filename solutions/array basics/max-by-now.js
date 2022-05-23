@@ -11,9 +11,9 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 let arraySize = parseInt(readLine());
-let maximum = Number.NEGATIVE_INFINITY;
+let maximum = Number.MIN_VALUE;
 for (let index = 0; index < arraySize; index++) {
-    let temporaryMax = parseInt(readLine());
-    maximum = Math.max(maximum, temporaryMax);
+    let temporary = parseInt(readLine());
+    maximum = Math.max(maximum, temporary);
     console.log(maximum);
 }
