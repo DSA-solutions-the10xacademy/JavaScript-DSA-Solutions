@@ -19,12 +19,12 @@ for(let row=0;row<rows;row++)
 	let	temporaryArray = readLine().split(" ").map(Number);
 	array.push(temporaryArray);
 }
-let submatrix = readLine().split(" ").map(Number);
-let answer=[];
-for(let row=submatrix[2]-1;row<submatrix[3];row++)
+let margins = readLine().split(" ").map(Number);
+let answer = [];
+for(let row = margins[2]-1;row < margins[3]; row++)
 {
 	let temporaryArray=[];
-	for(let column=submatrix[0]-1;column<submatrix[1];column++)
+	for(let column = margins[0]-1; column < margins[1]; column++)
 	{
 		temporaryArray.push(array[row][column]);
 	}
