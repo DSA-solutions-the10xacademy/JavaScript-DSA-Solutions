@@ -15,8 +15,16 @@ let arr = [];
 for (let index = 0; index < arraySize; index++) {
     arr.push(parseInt(readLine()));
 }
-let xor = 0;
 for (let index = 0; index < arraySize; index++) {
-    xor = xor ^ arr[index];
+    let found = false;
+    for (let currIndex = 0; currIndex < arraySize; currIndex++) {
+        if (index != currIndex) {
+            if (arr[index] === arr[currIndex]) {
+                found = true;
+            }
+        }
+    }
+    if (found === false) {
+        console.log(arr[index]);
+    }
 }
-console.log(xor);
