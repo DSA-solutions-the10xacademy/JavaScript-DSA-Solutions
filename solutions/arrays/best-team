@@ -1,0 +1,72 @@
+let fs = require("fs");
+let data = fs.readFileSync(0, 'utf-8');
+let idx = 0;
+data = data.split('\n');
+
+function readLine() {
+	idx++;
+	return data[idx - 1];
+}
+
+// -------- Do NOT edit anything above this line ----------
+
+function bestScore(A,B,C){
+	// complete the function
+	A.sort(function(a,b){return a-b;});
+	B.sort(function(a,b){return a-b;});
+	C.sort(function(a,b){return a-b;});
+	let answer=99999;
+	let iteratorOfA=0;
+	let iteratorOfB=0;
+	let iteratorOfC=0;
+	while(iteratorOfA < A.length && iteratorOfB < B.length && iteratorOfC < C.length)
+	{
+		if(A[iteratorOfA] >= B[iteratorOfB] && B[iteratorOfB] >= C[iteratorOfC])
+		{
+			answer=Math.min(answer,Math.abs(A[iteratorOfA]-B[iteratorOfB]) + Math.abs(B[iteratorOfB]-C[iteratorOfC]));
+			iteratorOfC = iteratorOfC +1;
+		}
+		else  if(A[iteratorOfA] >= C[iteratorOfC] && C[iteratorOfC] >= B[iteratorOfB])
+		{
+			answer=Math.min(answer,Math.abs(A[iteratorOfA]-C[iteratorOfC]) + Math.abs(C[iteratorOfC]-B[iteratorOfB]));
+			iteratorOfB = iteratorOfB +1;
+		}
+		else  if(B[iteratorOfB] >= A[iteratorOfA] && A[iteratorOfA] >= C[iteratorOfC])
+		{
+			answer=Math.min(answer,Math.abs(B[iteratorOfB]-A[iteratorOfA]) + Math.abs(A[iteratorOfA]-C[iteratorOfC]));
+			iteratorOfC = iteratorOfC +1;
+		}
+		else  if(B[iteratorOfB] >= C[iteratorOfC] && C[iteratorOfC] >= A[iteratorOfA])
+		{
+			answer=Math.min(answer,Math.abs(B[iteratorOfB]-C[iteratorOfC]) + Math.abs(C[iteratorOfC]-A[iteratorOfA]));
+			iteratorOfA = iteratorOfA +1;
+		}
+		else  if(C[iteratorOfC] >= A[iteratorOfA] && A[iteratorOfA] >= B[iteratorOfB])
+		{
+			answer=Math.min(answer,Math.abs(C[iteratorOfC]-A[iteratorOfA]) + Math.abs(A[iteratorOfA]-B[iteratorOfB]));
+			iteratorOfB = iteratorOfB +1;
+		}
+		else  if(C[iteratorOfC] >= B[iteratorOfB] && B[iteratorOfB] >= A[iteratorOfA])
+		{
+			answer=Math.min(answer,Math.abs(C[iteratorOfC]-B[iteratorOfB]) + Math.abs(B[iteratorOfB]-A[iteratorOfA]));
+			iteratorOfA = iteratorOfA +1;
+		}
+	}
+	console.log(answer);
+}
+
+// Do not change anything below this line
+function Convert_to_number(list){
+	for(let each in list){
+		list[each]=Number(list[each]);
+	}
+}
+// Driver code 
+
+let A= readLine().split(" ");
+Convert_to_number(A);
+let B= readLine().split(" ");
+Convert_to_number(B);
+let C= readLine().split(" "); 
+Convert_to_number(C) ;
+bestScore(A,B,C);
