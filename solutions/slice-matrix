@@ -1,0 +1,36 @@
+let fs = require("fs");
+let data = fs.readFileSync(0, 'utf-8');
+let idx = 0;
+data = data.split('\n');
+
+function readLine() {
+  idx++;
+  return data[idx - 1];
+}
+
+// -------- Do NOT edit anything above this line ----------
+// Use readLine() for taking input, it will read one line of from the input  and is stored in string format
+let rowColumn = readLine().split(" ").map(Number);
+let rows=rowColumn[0];
+let columns=rowColumn[1];
+let array=[];
+for(let row=0;row<rows;row++)
+{
+	let	temporaryArray = readLine().split(" ").map(Number);
+	array.push(temporaryArray);
+}
+let margins = readLine().split(" ").map(Number);
+let answer=[];
+for(let row=margins[2]-1;row<margins[3];row++)
+{
+	let temporaryArray=[];
+	for(let column=margins[0]-1;column<margins[1];column++)
+	{
+		temporaryArray.push(array[row][column]);
+	}
+	answer.push(temporaryArray);
+}
+
+for(val of answer){
+	console.log(...val);
+}
