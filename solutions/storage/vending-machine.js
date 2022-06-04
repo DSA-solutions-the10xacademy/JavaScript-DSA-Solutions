@@ -11,8 +11,8 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-let customer_name = readLine();
-let customer_order = readLine();
+let customerName = readLine();
+let customerOrder = readLine();
 
-console.log("Hello" + " " + customer_name + " " + "!!!");
-console.log("You ordered" + " " + customer_order + ".");
+console.log("Hello" + " " + customerName + " " + "!!!");
+console.log("You ordered" + " " + customerOrder + ".");
