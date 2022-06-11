@@ -5,7 +5,7 @@ data = data.split('\n');
 
 function readLine() {
     idx++;
-    return data[idx - 1].trim();
+    return data[idx - 1];
 }
 
 // -------- Do NOT edit anything above this line ----------
