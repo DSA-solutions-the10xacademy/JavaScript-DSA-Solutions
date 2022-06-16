@@ -7,9 +7,9 @@ function readLine() {
   idx++;
   return data[idx - 1];
 }
-let n = parseInt(readLine());
-if (n % 2 == 0) {
-  console.log(n);
+let number = parseInt(readLine());
+if (number % 2 == 0) {
+  console.log(number);
 } else {
-  console.log(n * 2);
+  console.log(number * 2);
 }
