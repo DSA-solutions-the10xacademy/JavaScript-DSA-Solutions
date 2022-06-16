@@ -7,20 +7,20 @@ function readLine() {
   idx++;
   return data[idx - 1];
 }
-let n = parseInt(readLine());
-let a = parseInt(readLine());
-let res = "False";
-for (let i = 2; i <= n; i++) {
-  let b = parseInt(readLine());
-  let c = a + b;
-  if (c > 100) {
-    res = "True";
+let length = parseInt(readLine());
+let num1 = parseInt(readLine());
+let result = false;
+for (let i = 2; i <= length; i++) {
+  let num2 = parseInt(readLine());
+  let consecutiveSum = num1 + num2;
+  if (consecutiveSum > 100) {
+    result = true;
     break;
   }
-  c = c - a;
-  a = b;
+  consecutiveSum = num2;
+  num1 = num2;
 }
-console.log(res);
+console.log(result);
 
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
