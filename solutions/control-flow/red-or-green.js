@@ -11,24 +11,23 @@ function readLine() {
 // -------- Do NOT edit anything above this line ----------
 // Use readLine() for taking input, it will read one line of from the input  and is stored in string format
 
-let string = readLine();
+let inputString = readLine();
+let countRed = 0;
+let countGreen = 0;
+let minimum = 0;
 
-let R_count = 0;
-let G_count = 0;
-let min = 0;
-
-for (let i = 0; i < string.length; i++) {
-  if (string[i] == "R") {
-    R_count++;
+for (let index = 0; index < inputString.length; index++) {
+  if (inputString[index] == "R") {
+    countRed++;
   } else {
-    G_count++;
+    countGreen++;
   }
 }
 
-if (R_count > G_count) {
-  min = G_count;
+if (countRed > countGreen) {
+  minimum = countGreen;
 } else {
-  min = R_count;
+  minimum = countRed;
 }
 
-console.log(min);
+console.log(minimum);
