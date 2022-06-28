@@ -14,6 +14,6 @@ function readLine() {
 let N=parseInt(readLine())
 let multiplicativeTable=[]
 for(let index=1;index<=10;index++){
-	multiplicativeTable.push(N*index)
+  multiplicativeTable.push(N*index)
 }
 console.log(...multiplicativeTable)
