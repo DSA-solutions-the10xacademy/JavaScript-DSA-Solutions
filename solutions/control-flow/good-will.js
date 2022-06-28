@@ -13,19 +13,19 @@ function readLine() {
 
 let n = parseInt(readLine());
 
-for (let i = 0; i < n; i++) {
-  let col_string = "";
+for (let index = 0; index < n; index++) {
+  let columnString = "";
 
-  for (let j = 0; j < n - i - 1; j++) {
-    col_string += " ";
+  for (let j = 0; j < n - index - 1; j++) {
+    columnString += " ";
   }
 
-  for (let j = 0; j < 2 * i + 1; j++) {
-    if ((j + i) % 2 == 0) {
-      col_string += "*";
+  for (let j = 0; j < 2 * index + 1; j++) {
+    if ((j + index) % 2 == 0) {
+      columnString += "*";
     } else {
-      col_string += "$";
+      columnString += "$";
     }
   }
-  console.log(col_string);
+  console.log(columnString);
 }
