@@ -13,29 +13,29 @@ function readLine() {
 
 let n = parseInt(readLine());
 
-for (let i = 0; i < n; i++) {
-  let column_string = "";
-  for (let j = 0; j < n - i - 1; j++) {
-    column_string += " ";
+for (let index = 0; index < n; index++) {
+  let columnString = "";
+  for (let indexForSpaces = 0; indexForSpaces < n - index - 1; indexForSpaces++) {
+    columnString += " ";
   }
 
-  for (let j = 0; j < 2 * i + 1; j++) {
-    column_string += "*";
+  for (let indexForStars = 0; indexForStars < 2 * index + 1; indexForStars++) {
+    columnString += "*";
   }
 
-  console.log(column_string);
+  console.log(columnString);
 }
 
-for (let i = 1; i < n; i++) {
-  let column_string = "";
+for (let index = 1; index < n; index++) {
+  let columnString = "";
 
-  for (let j = 0; j < i; j++) {
-    column_string += " ";
+  for (let indexForSpaces = 0; indexForSpaces < index; indexForSpaces++) {
+    columnString += " ";
   }
 
-  for (let j = 0; j < 2 * (n - i - 1) + 1; j++) {
-    column_string += "*";
+  for (let indexForStars = 0; indexForStars < 2 * (n - index - 1) + 1; indexForStars++) {
+    columnString += "*";
   }
 
-  console.log(column_string);
+  console.log(columnString);
 }
