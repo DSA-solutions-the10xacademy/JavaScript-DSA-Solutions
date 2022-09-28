@@ -14,5 +14,5 @@ let costOfOneChocolate = parseInt(readLine());
 let noOfChocolates = parseInt(readLine());
 let costOfOneIceCream = parseInt(readLine());
 let noOfIceCreams = parseInt(readLine());
-let totalBill = (costOfOneChocolate*noOfChocolates)+(costOfOneIceCream*noOfIceCreams);
+let totalBill = (costOfOneChocolate * noOfChocolates) + (costOfOneIceCream * noOfIceCreams);
 console.log(totalBill);
