@@ -10,7 +10,7 @@ function readLine() {
 
 // -------- Do NOT edit anything above this line ----------
 let givenInteger = parseInt(readLine());
-if(givenInteger%2==0){
+if(givenInteger%2 == 0){
 	console.log("Even");
 }else{
 	console.log("Odd");
