@@ -15,7 +15,7 @@ function calculateTotalFund(salaries, peopleCount){
 	let totalCess = 0;
     for(let index = 0 ; index < peopleCount ; index++){
         let individualCess = Math.ceil((salaries[index] * 7) / 100);
-        totalCess =totalCess + individualCess;
+        totalCess = totalCess + individualCess;
     }
     return totalCess;
 }
