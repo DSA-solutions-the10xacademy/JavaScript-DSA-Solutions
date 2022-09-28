@@ -21,7 +21,7 @@ function calculateTotalFund(salaries, peopleCount){
 }
 function ConvertToNumber(list){
     for(let each in list){
-        list[each]=Number(list[each])
+        list[each] = Number(list[each])
     }
 }
 let peopleCount = parseInt(readLine());
