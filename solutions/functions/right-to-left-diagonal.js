@@ -16,8 +16,8 @@ function rightToLeftDiagonal(matrix){
 	let noOfRows = matrix.length;
 	let noOfColumns = matrix[0].length;
 	let resultantArray = [];
-	for(let rowIndex=0;rowIndex<noOfRows;rowIndex++){
-		for(let columnIndex = 0;columnIndex<noOfColumns;columnIndex++){
+	for(let rowIndex = 0 ; rowIndex < noOfRows ; rowIndex++){
+		for(let columnIndex = 0 ; columnIndex < noOfColumns ; columnIndex++){
 			if(rowIndex+columnIndex === lengthOfMatrix-1){
 				resultantArray.push(matrix[rowIndex][columnIndex]);
 			}
@@ -29,7 +29,7 @@ function rightToLeftDiagonal(matrix){
 // Do not change anything below this line
 let m = parseInt(readLine());
 let matrix = [];
-for (let row = 0; row < m; row++) {
+for (let row = 0 ; row < m ; row++) {
   let rowElements = readLine().split(" ");
   matrix.push(rowElements);
 }
