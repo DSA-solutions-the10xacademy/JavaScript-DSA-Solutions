@@ -18,7 +18,7 @@ function rightToLeftDiagonal(matrix){
 	let resultantArray = [];
 	for(let rowIndex = 0 ; rowIndex < noOfRows ; rowIndex++){
 		for(let columnIndex = 0 ; columnIndex < noOfColumns ; columnIndex++){
-			if(rowIndex+columnIndex === lengthOfMatrix-1){
+			if(rowIndex + columnIndex === lengthOfMatrix - 1){
 				resultantArray.push(matrix[rowIndex][columnIndex]);
 			}
 		}
